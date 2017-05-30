@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="common-header">
+<meta charset="UTF-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<!-- Bootstrap Core CSS -->
+<link th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.min.css}"
+	rel="stylesheet" media="screen" />
+<!-- Custom styles for this template -->
+<link th:href="@{/css/style.css}" rel="stylesheet" media="screen" />
+<link rel="stylesheet"
+	th:href="@{/css/owlcarousel/owl.carousel.min.css}" />
+<link rel="stylesheet"
+	th:href="@{/css/owlcarousel/owl.theme.default.min.css}" />
+</head>
+<div th:fragment="before-body-script">
+	<script th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
+</div>
+</html>
