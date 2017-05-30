@@ -1,2 +1,136 @@
 @CHARSET "UTF-8";
- 
+
+* {
+	font-family: 'Lato', sans-serif;
+}
+
+.bold {
+	font-weight: 700;
+}
+.light{
+	font-weight:300;
+}
+.italic {
+	font-weight: 400;
+	font-style: italic;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.navbar .navbar-nav {
+	display: inline-block;
+	float: none;
+}
+
+.navbar .navbar-collapse {
+	text-align: center;
+}
+
+.navbar-right, .middle-nav-container>a {
+	padding: 0 15px;
+	color: #A2A2A2;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.navbar-right, .middle-nav-container>a:hover {
+	color: #00BF9A
+}
+
+.brand-logo {
+	font-size: 36px;
+	float: left;
+}
+
+.brand-logo:after {
+	clear: both;
+}
+
+.middle-nav-container, .middle-logo-container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.flexbox-container {
+	display: flex;
+}
+
+.middle-nav-container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.va-center {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.cart {
+	float: right;
+}
+
+.cart:after {
+	clear: both
+}
+
+.coupon {
+	font-size: 16px;
+	color: #000;
+	height: 36px;
+	line-height: 36px;
+	margin-top: 24px
+}
+
+/*Footer*/
+.logo-box {
+	display: inline-block;
+	padding: 0px 5px;
+	cursor: pointer
+}
+
+.social-media-logo {
+	text-align: center;
+}
+
+.brand-logo-footer {
+	font-size: 36px;
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.sitemap-footer {
+	height: 150px;
+}
+
+.content-margin {
+	margin-top: 50px;
+}
+
+.sitemap >a {
+	font-size: 16px;
+	color: #757575;
+}
+.email{
+	border: 1px solid  #212121;
+	height: 30px;
+	padding-left :8px;
+	width: 240px;
+	
+}
+.submit{
+	background-color: #00BF9A;
+	color:#000;
+	height: 30px;
+	border:0px;
+	width: 120px;
+	cursor: pointer;
+	padding: 0
+}
