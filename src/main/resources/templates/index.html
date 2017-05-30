@@ -2,25 +2,72 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="common/header :: common-header">
 </head>
-<body style="overflow-x: hidden">
-
-
-	 <div class="row">
-		<div class="owl-carousel owl-theme">
-			<div>
-				<img srcset="/images/banner_01.jpg 2000w, /images/banner_mobile_01.jpg 600w" style="width: 100%" />
-			</div>
-			<div>
-				<img srcset="/images/banner_02.jpg 2000w, /images/banner_mobile_01.jpg 600w" style="width: 100%" />
-			</div>
-			<div>
-				<img srcset="/images/banner_02.jpg 2000w, /images/banner_mobile_01.jpg 600w" style="width: 100%" />
-			</div>
-			<div>
-				<img srcset="/images/banner_02.jpg 2000w, /images/banner_mobile_01.jpg 600w" style="width: 100%" />
+<body style="overflow-x: hidden; background-color: #e0e0e0;">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="owl-carousel owl-theme">
+				<div>
+					<img
+						srcset="/images/banner_02.jpg 2000w, /images/banner_mobile_01.jpg 600w"
+						style="width: 100%" />
+				</div>
+				<div>
+					<img
+						srcset="/images/banner_02.jpg 2000w, /images/banner_mobile_01.jpg 600w"
+						style="width: 100%" />
+				</div>
+				<div>
+					<img
+						srcset="/images/banner_02.jpg 2000w, /images/banner_mobile_01.jpg 600w"
+						style="width: 100%" />
+				</div>
+				<div>
+					<img
+						srcset="/images/banner_02.jpg 2000w, /images/banner_mobile_01.jpg 600w"
+						style="width: 100%" />
+				</div>
 			</div>
 		</div>
-	</div> 
+		<div class="row">
+			<div class="col-lg-12 card">
+				<div class="story">
+					<div class="title">THE STORY</div>
+					<div class="desc-txt">Each product we create goes through a
+						journey, has a story, - designed by an artist, crafted by
+						artisans, packed and shipped with love.</div>
+				</div>
+			</div>
+		</div>
+		<div class="row item-section">
+			<div class="col-lg-4 col-sm-12 item">
+				<div class="col-lg-12 card">
+					<div class="title">
+						<span class="item-name center">KRIYA</span>
+					</div>
+					<img class="item-img-size center-block" src="banner.png" alt="txt" />
+					<div class="desc-txt item-type">WOOD VENEER NOTEBOOKS</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-12 item">
+				<div class="col-lg-12 card">
+					<div class="title">
+						<span class="item-name center">BHUMI</span>
+					</div>
+					<img class="item-img-size center-block" src="banner.png" alt="txt" />
+					<div class="desc-txt item-type">TERRACOTTA WATERBOTTLE</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-12 item">
+				<div class="col-lg-12 card">
+					<div class="title">
+						<span class="item-name center">VANAA</span>
+					</div>
+					<img class="item-img-size center-block" src="banner.png" alt="txt" />
+					<div class="desc-txt item-type">WOODEN COASTERS</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div th:replace="common/header :: before-body-script"></div>
 	<script th:src="@{/js/owlcarousel/owl.carousel.min.js}"></script>
 	<script th:src="@{/js/index.js}"></script>

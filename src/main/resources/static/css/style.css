@@ -1,2 +1,61 @@
 @CHARSET "UTF-8";
- 
+
+.item-section {
+	margin: 4pt -13pt;
+}
+
+.item {
+	padding: 0 2pt;
+}
+
+.card {
+	background-color: #ffffff;
+}
+
+.item>.card {
+	height: 560px; /* change */
+}
+
+.title {
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: #000000;
+	text-align: center;
+}
+
+.desc-txt {
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: normal;
+	color: #616161;
+	text-align: center;
+	transform: translateY(15px);
+}
+
+.story {
+	height: 168px;
+	margin: auto;
+	width: 60%;
+	margin: auto;
+	width: 60%;
+	transform: translateY(30%);
+}
+
+.item-img-size {
+	height: 420px; /* change */
+	width: 280px;
+}
+
+.item-type {
+	font-size: 12px;
+	font-variant: small-caps;
+	margin-top: 4px;
+}
+
+.item-name {
+	letter-spacing: 0.2em;
+	height: 70px; /* change */
+	line-height: 70px;
+}
