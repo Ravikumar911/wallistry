@@ -4,6 +4,9 @@
 	font-family: 'Lato', sans-serif;
 }
 
+html,body{
+	overflow-x:hidden; 
+}
 .bold {
 	font-weight: 700;
 }
@@ -15,6 +18,9 @@
 	font-style: italic;
 }
 
+.spacing-top{
+	margin-top:30px
+}
 .navbar {
 	margin-bottom: 0px;
 }
@@ -85,10 +91,13 @@
 	color: #000;
 	height: 36px;
 	line-height: 36px;
-	margin-top: 24px
 }
 
 /*Footer*/
+.footer{
+	margin-top:60px;
+}
+
 .logo-box {
 	display: inline-block;
 	padding: 0px 5px;
@@ -133,4 +142,103 @@
 	width: 120px;
 	cursor: pointer;
 	padding: 0
+}
+
+
+/* Tabs  */
+.item-section {
+	margin: 4pt -13pt;
+}
+
+.item {
+	padding: 0 2pt;
+}
+
+.card {
+	background-color: #ffffff;
+}
+
+.item>.card {
+	height: 560px; /* change */
+}
+
+.title {
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: #000000;
+	text-align: center;
+}
+
+.desc-txt {
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: normal;
+	color: #616161;
+	text-align: center;
+	transform: translateY(15px);
+}
+
+.story {
+	height: 168px;
+	margin: auto;
+	width: 60%;
+	margin: auto;
+	width: 60%;
+	transform: translateY(30%);
+}
+
+.item-img-size {
+	height: 420px; /* change */
+	width: 280px;
+}
+
+.item-type {
+	font-size: 12px;
+	font-variant: small-caps;
+	margin-top: 4px;
+}
+
+.item-name {
+	letter-spacing: 0.2em;
+	height: 70px; /* change */
+	line-height: 70px;
+}
+
+/*Tabs */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) {
+  .submit{
+  	width:90px; 
+  }
+  .email{
+  	width:180px;
+  }	
+  .sitemap-footer{
+  	height: 100%;
+  }
+  .coupon{
+  	font-size: 12px;
+  }
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 567px) {
+  .submit{
+  	width:85px; 
+  }
+  .email{
+  	width:172px;
+  }	
+  .sitemap-footer{
+  	height: 100%;
+  }
+  .coupon{
+  	font-size: 10px;
+  }
 }
