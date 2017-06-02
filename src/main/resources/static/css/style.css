@@ -1,11 +1,162 @@
 @CHARSET "UTF-8";
 
+* {
+	font-family: 'Lato', sans-serif;
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.light {
+	font-weight: 300;
+}
+
+.italic {
+	font-weight: 400;
+	font-style: italic;
+}
+
+.spacing-top {
+	margin-top: 30px
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.navbar .navbar-nav {
+	display: inline-block;
+	float: none;
+}
+
+.navbar .navbar-collapse {
+	text-align: center;
+}
+
+.navbar-right, .middle-nav-container>a {
+	padding: 0 15px;
+	color: #A2A2A2;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.navbar-right, .middle-nav-container>a:hover {
+	color: #00BF9A
+}
+
+.brand-logo {
+	font-size: 36px;
+	float: left;
+}
+
+.brand-logo:after {
+	clear: both;
+}
+
+.middle-nav-container, .middle-logo-container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.flexbox-container {
+	display: flex;
+}
+
+.middle-nav-container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.va-center {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.cart {
+	float: right;
+}
+
+.cart:after {
+	clear: both
+}
+
+.coupon {
+	font-size: 16px;
+	color: #000;
+	height: 36px;
+	line-height: 36px;
+}
+
+/*Footer*/
+.footer {
+	margin-top: 60px;
+}
+
+.logo-box {
+	display: inline-block;
+	padding: 0px 5px;
+	cursor: pointer
+}
+
+.social-media-logo {
+	text-align: center;
+}
+
+.brand-logo-footer {
+	font-size: 36px;
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.sitemap-footer {
+	height: 150px;
+}
+
+.content-margin {
+	margin-top: 50px;
+}
+
+.sitemap>a {
+	font-size: 16px;
+	color: #757575;
+}
+
+.email {
+	border: 1px solid #212121;
+	height: 30px;
+	padding-left: 8px;
+	width: 240px;
+}
+
+.submit {
+	background-color: #00BF9A;
+	color: #000;
+	height: 30px;
+	border: 0px;
+	width: 120px;
+	cursor: pointer;
+	padding: 0
+}
+
+/* Tabs  */
 .item-section {
 	margin: 4pt -13pt;
 }
 
 .item {
 	padding: 0 2pt;
+	margin-bottom: 2pt;
 }
 
 .card {
@@ -13,34 +164,25 @@
 }
 
 .item>.card {
-	height: 560px; /* change */
+	height: 552px;
 }
 
 .title {
-	font-family: Lato;
 	font-size: 16px;
 	font-weight: bold;
-	font-variant: small-caps;
 	color: #000000;
 	text-align: center;
 }
 
 .desc-txt {
-	font-family: Lato;
 	font-size: 16px;
 	font-weight: normal;
-	color: #616161;
 	text-align: center;
-	transform: translateY(15px);
 }
 
 .story {
 	height: 168px;
-	margin: auto;
-	width: 60%;
-	margin: auto;
-	width: 60%;
-	transform: translateY(30%);
+	position: relative;
 }
 
 .item-img-size {
@@ -51,11 +193,60 @@
 .item-type {
 	font-size: 12px;
 	font-variant: small-caps;
-	margin-top: 4px;
+	margin-top: 24px;
 }
 
 .item-name {
 	letter-spacing: 0.2em;
 	height: 70px; /* change */
 	line-height: 70px;
+}
+
+.artist_text {
+	height: 96px;
+	position: relative;
+}
+/*Tabs */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width:
+	667px) {
+	.submit {
+		width: 90px;
+	}
+	.email {
+		width: 180px;
+	}
+	.sitemap-footer {
+		height: 100%;
+	}
+	.coupon {
+		font-size: 12px;
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width:
+	567px) {
+	.submit {
+		width: 85px;
+	}
+	.email {
+		width: 172px;
+	}
+	.sitemap-footer {
+		height: 100%;
+	}
+	.coupon {
+		font-size: 10px;
+	}
+	.item-name {
+		font-size: 14px;
+	}
+	.item-type {
+		font-size: 11px;
+	}
+	.artist_text {
+		height: 60px;
+		font-size: 14px;
+	}
 }

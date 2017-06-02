@@ -2,10 +2,26 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="common/header :: common-header">
 </head>
-<body style="overflow-x: hidden; background-color: #e0e0e0;">
-	<div class="container-fluid">
+<body>
+	<nav class="navbar sticky-top">
+		<div class="container-fluid">
+			<div class="brand-logo">Wallistry</div>
+			<div class="flexbox-container middle-nav-container">
+				<a>HOME</a> <a>NOTEBOOKS</a> <a>BOTTLE</a> <a>COASTER</a> <a></a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">MY CART</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container-fluid" style="background-color: #e0e0e0;">
 		<div class="row">
 			<div class="owl-carousel owl-theme">
+				<div>
+					<img
+						srcset="/images/banner_01.jpg 2000w, /images/banner_mobile_01.jpg 600w"
+						style="width: 100%" />
+				</div>
 				<div>
 					<img
 						srcset="/images/banner_02.jpg 2000w, /images/banner_mobile_01.jpg 600w"
@@ -28,14 +44,15 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-12 card">
-				<div class="story">
-					<div class="title">THE STORY</div>
-					<div class="desc-txt">Each product we create goes through a
-						journey, has a story, - designed by an artist, crafted by
-						artisans, packed and shipped with love.</div>
+		<div class="row card story">
+			<div class="col-lg-12 va-center">
+				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+					<p class="title">THE STORY</p>
 				</div>
+				<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt">
+					Each product we create goes through a journey, has a story, -
+					designed by an artist, crafted by artisans, packed and shipped with
+					love.</div>
 			</div>
 		</div>
 		<div class="row item-section">
@@ -44,8 +61,9 @@
 					<div class="title">
 						<span class="item-name center">KRIYA</span>
 					</div>
-					<img class="item-img-size center-block" src="banner.png" alt="txt" />
-					<div class="desc-txt item-type">WOOD VENEER NOTEBOOKS</div>
+					<img class="item-img-size center-block"
+						src="/images/banner_mobile_01.jpg" alt="txt" />
+					<div class="text-center item-type">WOOD VENEER NOTEBOOKS</div>
 				</div>
 			</div>
 			<div class="col-lg-4 col-sm-12 item">
@@ -53,8 +71,9 @@
 					<div class="title">
 						<span class="item-name center">BHUMI</span>
 					</div>
-					<img class="item-img-size center-block" src="banner.png" alt="txt" />
-					<div class="desc-txt item-type">TERRACOTTA WATERBOTTLE</div>
+					<img class="item-img-size center-block"
+						src="/images/banner_mobile_01.jpg" alt="txt" />
+					<div class="text-center item-type">TERRACOTTA WATERBOTTLE</div>
 				</div>
 			</div>
 			<div class="col-lg-4 col-sm-12 item">
@@ -62,12 +81,48 @@
 					<div class="title">
 						<span class="item-name center">VANAA</span>
 					</div>
-					<img class="item-img-size center-block" src="banner.png" alt="txt" />
-					<div class="desc-txt item-type">WOODEN COASTERS</div>
+					<img class="item-img-size center-block"
+						src="/images/banner_mobile_01.jpg" alt="txt" />
+					<div class="text-center item-type">WOODEN COASTERS</div>
+				</div>
+			</div>
+		</div>
+		<div class="row artist_text">
+			<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 title va-center">
+				<p>13 Arstists, artisans and still growing</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+				<p class="bold">OUR BLOG</p>
+			</div>
+			<div class="col-md-offset-2 col-md-8 text-center col-xs-12 blogtext">We
+				believe a blog is the best medium to express our interests to the
+				community. We explore interesting stories of people and their works
+				from different walks of life- design, craft and travel. We love to
+				share some of the best stories with you. Follow and subscribe to our
+				blog, to receive email updates every week.</div>
+			<div
+				class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center spacing-top">
+				<p class="bold">FEATURED VIDEOS</p>
+				<div align="center" class="embed-responsive embed-responsive-16by9">
+					<video class="embed-responsive-item">
+						<source src="/video/videoplayback.mp4" type="video/mp4" />
+					</video>
+				</div>
+			</div>
+			<div
+				class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center spacing-top">
+				<p class="bold">BLOG</p>
+				<div align="center" class="embed-responsive embed-responsive-16by9">
+					<video class="embed-responsive-item">
+						<source src="/video/videoplayback.mp4" type="video/mp4" />
+					</video>
 				</div>
 			</div>
 		</div>
 	</div>
+	<footer th:replace="common/footer :: footer"></footer>
 	<div th:replace="common/header :: before-body-script"></div>
 	<script th:src="@{/js/owlcarousel/owl.carousel.min.js}"></script>
 	<script th:src="@{/js/index.js}"></script>
