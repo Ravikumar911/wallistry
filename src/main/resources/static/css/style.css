@@ -206,6 +206,43 @@ html, body {
 	height: 96px;
 	position: relative;
 }
+/* bottle */
+.heading-section {
+	height: 200px;
+	position: relative;
+}
+
+.item-page-title {
+	font-family: serif;
+	font-size: 28px;
+    font-weight: lighter;
+}
+
+.tag-text {
+	font-size: 24px;
+	font-weight: lighter;
+}
+
+.floating-btn {
+	position: fixed;
+	top: 25px;
+	right: 45px;
+	margin: 0;
+	background-color: #424242;
+	color: white;
+	padding: 8px 16px;
+	border-radius: 6px;
+	z-index: 40;
+}
+.title-features{
+	font-family: serif;
+	font-size: 24px;
+}
+a.floating-btn:hover {
+	text-decoration: none;
+	color: #00BF9A
+}
+
 /*Tabs */
 
 /* Portrait and Landscape */
