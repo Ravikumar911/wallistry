@@ -151,12 +151,14 @@ html, body {
 
 /* Tabs  */
 .item-section {
-	margin: 4pt -13pt;
+	margin: 0pt -13pt;
 }
 
 .item {
 	padding: 0 2pt;
-	margin-bottom: 2pt;
+	border-right: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+    border-top: 2px solid #e0e0e0;
 }
 
 .card {
@@ -203,8 +205,10 @@ html, body {
 }
 
 .artist_text {
-	height: 96px;
+	height: 72px;
 	position: relative;
+	background: #e0e0e0;
+	margin-bottom: 24px;
 }
 /* bottle */
 .heading-section {
