@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: common-header">
+</head>
+<body>
+	<div class="container-fluid">
+		<a class="floating-btn" href="#">BUY NOW</a>
+		<div
+			th:replace="common/item :: heading-section(title='KRIYA',
+			type='WOOD VENEER NOTEBOOKS',
+			description='Inspired by the jaali patterns in Indian architecture, 
+			we came about the idea of designing geometrical patterns, cut on wood veneer.')"></div>
+		<div th:replace="common/item :: main-img-section(image='bhumi.png')"></div>
+		<div
+			th:replace="common/item :: sub-img-section(image1='notebook.png',image2='notebook.png')"></div>
+		<div class="row spacing-top">
+			<div class="col-lg-12 ">
+				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+					<p class="title-features">OUR COLLECTION</p>
+				</div>
+				<div class="col-md-offset-3 col-md-6 text-center col-xs-12 desc-txt">Each
+					notebook has a story and is uniquely designed, drawing inspiration
+					from the aesthetics of India.</div>
+			</div>
+		</div>
+		<div class="row spacing-top">
+			<div class="collection-section">
+				<div class="col-lg-4">
+					<div class="col-lg-12">
+						<img alt="icon" src="/images/notebook.png" style="width: 100%" />
+						<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+							<p class="collection-title">NAMAT</p>
+						</div>
+						<div class="col-lg-12 col-xs-12 text-center">Inspired by the
+							rich geometrical patterns of the Paigah complex, “Namat”,
+							displays the beauty of the Mughal art.</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="col-lg-12">
+						<img alt="icon" src="/images/notebook.png" style="width: 100%" />
+						<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+							<p class="collection-title">HIMALAYAN MUSK</p>
+						</div>
+						<div class="col-lg-12 col-xs-12 text-center">The five petal
+							floral pattern is inspired from the elegant Himalayan musk
+							flowers, found in the Himalayas.</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="col-lg-12">
+						<img alt="icon" src="/images/notebook.png" style="width: 100%" />
+						<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+							<p class="collection-title">KANCHI</p>
+						</div>
+						<div class="col-lg-12 col-xs-12 text-center">The mango art
+							is inspired from the patterns found in the traditional hand-woven
+							Kanchipuram silk sarees.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			th:replace="common/item :: features-heading(title='FEATURES OF KRIYA')"></div>
+
+	</div>
+	<footer th:replace="common/footer :: footer"></footer>
+	<div th:replace="common/header :: before-body-script"></div>
+</body>
+</html>
