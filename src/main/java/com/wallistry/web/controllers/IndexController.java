@@ -13,4 +13,8 @@ public class IndexController {
 		public String bottle(){
 			return "bottle";
 		}
+	 @RequestMapping("/coasters")
+		public String coasters(){
+			return "coasters";
+		}
 }
