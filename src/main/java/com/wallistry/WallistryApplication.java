@@ -64,7 +64,7 @@ public class WallistryApplication {
 
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(WallistryApplication.class, args);
-//		// Build a new authorized API client service.
+		// Build a new authorized API client service.
 //		Gmail service = getGmailService();
 //
 //		// Print the labels in the user's account.
