@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div class="row heading-section"
+		th:fragment="heading-section(title,type,description)">
+		<div class="col-lg-12 va-center">
+			<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+				<p class="title item-page-title" th:text="${title}"></p>
+			</div>
+			<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+				<p class="title" th:text="${type}"></p>
+			</div>
+			<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt"
+				th:text="${description}"></div>
+		</div>
+	</div>
+	<div class="row" th:fragment="main-img-section(image)">
+		<img th:src="@{'/images/'+${image}}" style="width: 100%" />
+	</div>
+	<div class="row" th:fragment="sub-img-section(image1,image2)">
+		<div class="col-lg-6">
+			<div class="row">
+				<img th:src="@{'/images/'+${image1}}" style="width: 100%" />
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="row">
+				<img th:src="@{'/images/'+${image2}}" style="width: 100%" />
+			</div>
+		</div>
+	</div>
+	<div class="row spacing-top"  th:fragment="features-heading(title)">
+			<div class="col-lg-12">
+				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+					<p class="title-features" th:text="${title}">FEATURES</p>
+				</div>
+			</div>
+		</div>
+			<!-- <div class="row story">
+			<div class="col-lg-12 va-center">
+				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+					<p class="title">STORY BOARD</p>
+				</div>
+				<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt">We
+					show you our journey of creating the first of the terracotta
+					series- Bhumi.</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="row">
+					<img src="/images/notebook.png" style="width: 100%" />
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="row">
+					<img src="/images/notebook.png" style="width: 100%" />
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="row">
+					<img src="/images/notebook.png" style="width: 100%" />
+				</div>
+			</div>
+		</div>
+		<div class="row"> 
+			<div class="col-lg-offset-2 col-lg-4">
+				<div class="row">
+					<img src="/images/notebook.png" style="width: 100%" />
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="row">
+					<img src="/images/notebook.png" style="width: 100%" />
+				</div>
+			</div>
+		</div> -->
+		
+</body>
+</html>

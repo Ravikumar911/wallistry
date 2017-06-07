@@ -7,7 +7,7 @@
 		<div class="container-fluid">
 			<div class="brand-logo">Wallistry</div>
 			<div class="flexbox-container middle-nav-container">
-				<a>HOME</a> <a>NOTEBOOKS</a> <a href="/bottle.html">BOTTLE</a> <a>COASTER</a>
+				<a>HOME</a> <a href="/notebook.html">NOTEBOOKS</a> <a href="/bottle.html">BOTTLE</a> <a>COASTER</a>
 				<a></a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
@@ -17,83 +17,20 @@
 	</nav>
 	<div class="container-fluid">
 		<a class="floating-btn" href="#">BUY NOW</a>
-		<div class="row heading-section">
-			<div class="col-lg-12 va-center">
-				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-					<p class="title item-page-title">BHUMI</p>
-				</div>
-				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-					<p class="title">TERRACOTTA WATER BOTTLE</p>
-				</div>
-				<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt">The
-					terracotta water bottles are crafted by the fine artisans of Tamil
+		<div
+			th:replace="common/item :: heading-section(title='BHUMI',
+			type='TERRACOTTA WATER BOTTLE',
+			description='The terracotta water bottles are crafted by the fine artisans of Tamil
 					Nadu. “Bhumi” means “Earth” in the Tamil language. Made from clay,
 					“Bhumi” is crafted to inspire a healthier lifestyle, reviving the
 					traditional use of earthenware, designed with a contemporary
-					outlook.</div>
-			</div>
-		</div>
-		<div class="row">
-			<img src="/images/bhumi.png" style="width: 100%" />
-		</div>
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="row">
-					<img src="/images/notebook.png" style="width: 100%" />
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="row">
-					<img src="/images/notebook.png" style="width: 100%" />
-				</div>
-			</div>
-		</div>
-		<!-- <div class="row story">
-			<div class="col-lg-12 va-center">
-				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-					<p class="title">STORY BOARD</p>
-				</div>
-				<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt">We
-					show you our journey of creating the first of the terracotta
-					series- Bhumi.</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-4">
-				<div class="row">
-					<img src="/images/notebook.png" style="width: 100%" />
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="row">
-					<img src="/images/notebook.png" style="width: 100%" />
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="row">
-					<img src="/images/notebook.png" style="width: 100%" />
-				</div>
-			</div>
-		</div>
-		<div class="row"> 
-			<div class="col-lg-offset-2 col-lg-4">
-				<div class="row">
-					<img src="/images/notebook.png" style="width: 100%" />
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="row">
-					<img src="/images/notebook.png" style="width: 100%" />
-				</div>
-			</div>
-		</div> -->
-		<div class="row spacing-top">
-			<div class="col-lg-12">
-				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-					<p class="title-features">FEATURES</p>
-				</div>
-			</div>
-		</div>
+					outlook.')"></div>
+		<div th:replace="common/item :: main-img-section(image='bhumi.png')"></div>
+		<div th:replace="common/item :: sub-img-section(image1='notebook.png',image2='notebook.png')"></div>
+		<div th:replace="common/item :: features-heading(title='FEATURES')"></div>
+
+
+
 		<div class="row spacing-top">
 			<div class="col-lg-4">
 				<div class="row">
