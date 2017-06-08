@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class IndexController {
+<<<<<<< HEAD
 	 @RequestMapping("/")
 		public String home(){
 			return "index";
@@ -17,4 +18,20 @@ public class IndexController {
 		public String coasters(){
 			return "coasters";
 		}
+=======
+	@RequestMapping("/")
+	public String home() {
+		return "index";
+	}
+
+	@RequestMapping("/bottle")
+	public String bottle() {
+		return "bottle";
+	}
+
+	@RequestMapping("/notebook")
+	public String notebook() {
+		return "notebook";
+	}
+>>>>>>> develop
 }

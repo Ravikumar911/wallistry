@@ -246,7 +246,14 @@ a.floating-btn:hover {
 	text-decoration: none;
 	color: #00BF9A
 }
-
+p.collection-title{
+	margin-top: 8px;
+	font-weight: bold;
+}
+.collection-section {
+	margin-left: 3%;
+	width: 94%;
+}
 /*Tabs */
 
 /* Portrait and Landscape */
