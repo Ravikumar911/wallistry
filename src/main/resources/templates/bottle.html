@@ -3,18 +3,7 @@
 <head th:replace="common/header :: common-header">
 </head>
 <body>
-	<nav class="navbar sticky-top">
-		<div class="container-fluid">
-			<div class="brand-logo">Wallistry</div>
-			<div class="flexbox-container middle-nav-container">
-				<a>HOME</a> <a href="/notebook.html">NOTEBOOKS</a> <a href="/bottle.html">BOTTLE</a> <a>COASTER</a>
-				<a></a>
-			</div>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">MY CART</a></li>
-			</ul>
-		</div>
-	</nav>
+	<nav th:replace="common/nav :: common-nav"></nav>
 	<div class="container-fluid">
 		<a class="floating-btn" href="#">BUY NOW</a>
 		<div

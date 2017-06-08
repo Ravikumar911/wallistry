@@ -5,17 +5,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class IndexController {
-	@RequestMapping("/")
-	public String home() {
-		return "index";
-	}
-
-	@RequestMapping("/bottle")
-	public String bottle() {
-		return "bottle";
-	}
-
-	@RequestMapping("/notebook")
+	 @RequestMapping("/")
+		public String home(){
+			return "index";
+		}
+	 @RequestMapping("/bottle")
+		public String bottle(){
+			return "bottle";
+		}
+	 @RequestMapping("/coasters")
+		public String coasters(){
+			return "coasters";
+		}
+  @RequestMapping("/notebook")
 	public String notebook() {
 		return "notebook";
 	}
