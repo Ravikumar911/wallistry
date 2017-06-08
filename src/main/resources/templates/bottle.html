@@ -3,18 +3,7 @@
 <head th:replace="common/header :: common-header">
 </head>
 <body>
-	<nav class="navbar sticky-top">
-		<div class="container-fluid">
-			<div class="brand-logo">Wallistry</div>
-			<div class="flexbox-container middle-nav-container">
-				<a>HOME</a> <a href="/notebook.html">NOTEBOOKS</a> <a href="/bottle.html">BOTTLE</a> <a>COASTER</a>
-				<a></a>
-			</div>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">MY CART</a></li>
-			</ul>
-		</div>
-	</nav>
+	<nav th:replace="common/nav :: common-nav"></nav>
 	<div class="container-fluid">
 		<a class="floating-btn" href="#">BUY NOW</a>
 		<div
@@ -28,59 +17,23 @@
 		<div th:replace="common/item :: main-img-section(image='bhumi.png')"></div>
 		<div th:replace="common/item :: sub-img-section(image1='notebook.png',image2='notebook.png')"></div>
 		<div th:replace="common/item :: features-heading(title='FEATURES')"></div>
-
-
-
 		<div class="row spacing-top">
 			<div class="col-lg-4">
-				<div class="row">
-					<div class="col-lg-4">
-						<img alt="icon" src="/images/1.svg" />
-					</div>
-					<div class="col-lg-8">
-						<div class="row">
-							<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-								<p class="title">LIFESTYLE</p>
-							</div>
-							<div class="col-lg-12 col-xs-12">Water is one of the most
+				<div th:replace="common/item :: features-item-section(image='1.svg',title='LIFESTYLE',
+								description='Water is one of the most
 								vital sources for human survival. The terracotta water bottle is
 								designed to create a conscious effort to inspire a healthier
-								lifestyle.</div>
-						</div>
-					</div>
-				</div>
+								lifestyle.')"></div>
 			</div>
 			<div class="col-lg-4">
-				<div class="row">
-					<div class="col-lg-3">
-						<img alt="icon" src="/images/2.svg" />
-					</div>
-					<div class="col-lg-9">
-						<div class="row">
-							<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-								<p class="title">NATURAL COOLING</p>
-							</div>
-							<div class="col-lg-12 col-xs-12">The terracotta water
-								bottle keeps the water cool in a natural way.</div>
-						</div>
-					</div>
-				</div>
+				<div th:replace="common/item :: features-item-section(image='2.svg',
+								title='NATURAL COOLING', description='The terracotta water
+								bottle keeps the water cool in a natural way.')"></div>
 			</div>
 			<div class="col-lg-4">
-				<div class="row">
-					<div class="col-lg-5">
-						<img alt="icon" src="/images/3.svg" />
-					</div>
-					<div class="col-lg-7">
-						<div class="row">
-							<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-								<p class="title">ECO -FRIENDLY</p>
-							</div>
-							<div class="col-lg-12 col-xs-12">Made from clay, the
-								terracotta water bottle is environmentally sustainable.</div>
-						</div>
-					</div>
-				</div>
+				<div th:replace="common/item :: features-item-section(image='3.svg',
+								title='ECO -FRIENDLY', description='Made from clay, the
+								terracotta water bottle is environmentally sustainable.')"></div>
 			</div>
 		</div>
 		<div class="row spacing-top">

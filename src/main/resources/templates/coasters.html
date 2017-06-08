@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: common-header">
+</head>
+<body>
+	<nav th:replace="common/nav :: common-nav"></nav>
+	<div class="container-fluid">
+		<a class="floating-btn" href="#">BUY NOW</a>
+		<div class="row heading-section">
+			<div class="col-lg-12 va-center">
+				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+					<p class="title item-page-title">VANAA</p>
+				</div>
+				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+					<p class="title">WOOD COASTER</p>
+				</div>
+				<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt">Handcrafted
+					from Acacia tree, an excellent timber wood, the wooden coasters
+					retain the original form, its rings and the colour. This colour
+					contrast in its rings, add luxury and a natural essence to your
+					table.</div>
+			</div>
+		</div>
+		<div class="row">
+			<img src="/images/bhumi.png" style="width: 100%" />
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="row">
+					<img src="/images/notebook.png" style="width: 100%" />
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="row">
+					<img src="/images/notebook.png" style="width: 100%" />
+				</div>
+			</div>
+		</div>
+		<div class="row spacing-top">
+			<div class="col-lg-12">
+				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+					<p class="title-features">FEATURES</p>
+				</div>
+			</div>
+		</div>
+		<div class="row spacing-top">
+			<div class="col-lg-6">
+				<div class="row">
+					<div class="col-lg-4">
+						<img alt="icon" src="/images/coaster-graphic-1.svg" />
+					</div>
+					<div class="col-lg-8">
+						<div class="row">
+							<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+								<p class="title">NATURAL FORM</p>
+							</div>
+							<div class="col-lg-12 col-xs-12">Each coaster is unique,
+								has its own natural form, colour and ring structure.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="row">
+					<div class="col-lg-5">
+						<img alt="icon" src="/images/coaster-graphic-2.svg" />
+					</div>
+					<div class="col-lg-7">
+						<div class="row">
+							<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+								<p class="title">SOURCE</p>
+							</div>
+							<div class="col-lg-12 col-xs-12">The coasters are crafted
+								from trees that are fallen naturally due to heavy winds. They
+								are sourced from renewable local forests in Auroville.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row spacing-top">
+			<div class="col-lg-12">
+				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+					<p class="italic tag-text">“The earth has its music for those
+						who will listen”</p>
+					<br />
+					<p class="italic tag-text">-George Satayana</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer th:replace="common/footer :: footer"></footer>
+	<div th:replace="common/header :: before-body-script"></div>
+	<input type="hidden" value="coasters" id="active-nav"/>
+</body>
+</html>
