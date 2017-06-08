@@ -11,8 +11,8 @@
 	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
 ]>
 <svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="150px"
-	 viewBox="0 0 100 150" enable-background="new 0 0 100 150" xml:space="preserve">
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="150px"
+	 viewBox="0 0 150 150" enable-background="new 0 0 150 150" xml:space="preserve">
 <switch>
 	<foreignObject requiredExtensions="&ns_ai;" x="0" y="0" width="1" height="1">
 		<i:pgfRef  xlink:href="#adobe_illustrator_pgf">
@@ -20,7 +20,7 @@
 	</foreignObject>
 	<g i:extraneous="self">
 		<g>
-			<g  transform="translate(-100)" id="XMLID_1_">
+			<g  transform="translate(-75)" id="XMLID_1_">
 				<g>
 					<polygon fill="#4DAF4E" points="143.87,72.55 144.4,73.08 144.74,73.77 144.86,74.49 144.86,106.61 146.61,107.07 
 						148.28,107.71 149.84,108.59 151.29,109.65 152.58,110.91 153.68,112.32 154.6,113.88 155.32,115.55 155.81,117.27 
