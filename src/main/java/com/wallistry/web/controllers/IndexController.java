@@ -17,4 +17,8 @@ public class IndexController {
 		public String coasters(){
 			return "coasters";
 		}
+  @RequestMapping("/notebook")
+	public String notebook() {
+		return "notebook";
+	}
 }
