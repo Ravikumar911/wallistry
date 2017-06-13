@@ -21,4 +21,8 @@ public class IndexController {
 	public String notebook() {
 		return "notebook";
 	}
+  @RequestMapping("/buynow")
+	public String buynow() {
+		return "buy-now";
+	}
 }
