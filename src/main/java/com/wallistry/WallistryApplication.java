@@ -50,8 +50,8 @@ public class WallistryApplication {
      * at ~/.credentials/gmail-java-quickstart
      */
     private static final List<String> SCOPES =
-        Arrays.asList(GmailScopes.GMAIL_SEND);
-
+        Arrays.asList(GmailScopes.GMAIL_SETTINGS_BASIC ,GmailScopes.MAIL_GOOGLE_COM,GmailScopes.GMAIL_SEND);
+   
     static {
         try {
             HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
@@ -65,20 +65,20 @@ public class WallistryApplication {
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(WallistryApplication.class, args);
 		// Build a new authorized API client service.
-//		Gmail service = getGmailService();
-//
-//		// Print the labels in the user's account.
-//		String user = "me";
-//		ListLabelsResponse listResponse = service.users().labels().list(user).execute();
-//		List<Label> labels = listResponse.getLabels();
-//		if (labels.size() == 0) {
-//			System.out.println("No labels found.");
-//		} else {
-//			System.out.println("Labels:");
-//			for (Label label : labels) {
-//				System.out.printf("- %s\n", label.getName());
-//			}
-//		}
+		Gmail service = getGmailService();
+
+		// Print the labels in the user's account.
+		String user = "me";
+		ListLabelsResponse listResponse = service.users().labels().list(user).execute();
+		List<Label> labels = listResponse.getLabels();
+		if (labels.size() == 0) {
+			System.out.println("No labels found.");
+		} else {
+			System.out.println("Labels:");
+			for (Label label : labels) {
+				System.out.printf("- %s\n", label.getName());
+			}
+		}
 	}
 	
 	public static Gmail getGmailService() throws IOException {
