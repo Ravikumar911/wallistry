@@ -436,6 +436,16 @@ img.zoomImg {
 	text-align: center;
 }
 
+.term-strip {
+	text-align: center;
+	height: 72px;
+	color: #000;
+	font-size: 16px;
+	position: relative;
+}
+.text{
+	margin:15px 0;
+}
 .bx-wrapper .bx-controls-direction a.disabled {
 	display: none;
 }

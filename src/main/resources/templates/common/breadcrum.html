@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div class="row" th:fragment="breadcrumb-section(activePage)">
+		<ul class="breadcrumb">
+			<li><a href="/">Home</a></li>
+			<li class="active" th:text="${activePage}"></li>
+		</ul>
+	</div>
+</body>
+</html>
