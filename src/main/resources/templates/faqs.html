@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: common-header" />
+<body>
+	<nav th:replace="common/nav :: common-nav"></nav>
+	<div class="container-fluid">
+		<div
+			th:replace="common/breadcrum :: breadcrumb-section(activePage='Frequently Asked Questions')"></div>
+		<div class="row primary-background term-strip">
+			<div class="middle-nav-container">FREQUENTLY ASKED QUESTIONS</div>
+		</div>
+		<div class="col-md-12 col-lg-12 text">
+			<p class="bold">When will I get my order delivered?</p>
+			<p>Since most of our products are handmade, we usually take a
+				time of 3-10 days to get the order reach you.</p>
+			<p class="bold">How much do you charge for shipping?</p>
+			<p>It is absolutely free for purchase above Rs. 600. We charge a
+				small amount of Rs.50 for orders below it (domestic orders).</p>
+			<p class="bold">Do you ship internationally?</p>
+			<p>We usually don’t but we can make some exceptions for you. Do
+				mail us at wallistry@gmail.com and we will discuss in detail.</p>
+			<p class="bold">How do I place bulk orders?</p>
+			<p>We know you love our products and if you do want to order more
+				of it, do visit our Corporate page or mail us at
+				wallistry@gmail.com.</p>
+			<p class="bold">What if I wish to return the product?</p>
+			<p>Oh no! We are very sure you will love us and our products and
+				if you still want to return, we do offer you a store credit. We
+				don’t have a pick up option just yet but do contact us or visit the
+				Returns policy page for more details</p>
+			<p>Note:</p>
+			<p>We do not refund in cash.</p>
+			<p class="bold">What do I do if I receive a damaged item?.</p>
+			<p>Hope you don’t but if you do, you can return to us and we will
+				replace it to you with a new piece. We don’t have a pick up option
+				just yet but do contact us and check out the Returns policy page for
+				more details.</p>
+			<h5>BLOG</h5>
+			<p>At Wallistry, we give utmost importance in creating
+				interesting content from various topics like design, craft and
+				travel. Just like how each of our product is a baby to us, a story
+				in our blog is important for us too. We will feature your story,
+				credit you and share the content (through social media and e-mail)
+				to our audience who loves us and you. We promise you, it will enrich
+				many lives.</p>
+			<p class="bold">Can my travel stories be featured in your blog?</p>
+			<p>Oh yes, you bet! We love to hear stories from travel
+				enthusiasts who love India just like we do and if you do love to
+				contribute to our blog, you are always welcome.</p>
+			<p class="bold">Other than travel, what are the other stories can I
+				contribute?</p>
+			<p>Well, you do know us, our love for design, art and crafts. If
+				you are a designer and make cool stuff or if you do have some
+				interesting stories of lesser known crafts or lots more, we would
+				love to hear from you.</p>
+		</div>
+	</div>
+	<footer th:replace="common/footer :: footer"></footer>
+	<div th:replace="common/header :: before-body-script"></div>
+</body>
+</html>

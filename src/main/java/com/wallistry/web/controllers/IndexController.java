@@ -29,9 +29,32 @@ public class IndexController {
 	public String buynow() {
 		return "buy-now";
 	}
+
 	@RequestMapping("/privacy-policy")
-	public String privacy(){
+	public String privacy() {
 		return "/privacy-policy";
 	}
-	
+
+	@RequestMapping("/return-policy")
+	public String returnPolicy() {
+		return "/return-policy";
+	}
+
+	@RequestMapping("/contact-us")
+	public String contactUs() {
+		return "/contact-us";
+	}
+	@RequestMapping("/about-us")
+	public String aboutUs() {
+		return "/about-us";
+	}
+	@RequestMapping("/terms-conditions")
+	public String termsAndCondition() {
+		return "/terms-conditions";
+	}
+	@RequestMapping("/faqs")
+	public String faqs(){
+		return "/faqs";
+	}
+
 }

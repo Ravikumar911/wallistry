@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: common-header" />
+<body>
+	<nav th:replace="common/nav :: common-nav"></nav>
+	<div class="container-fluid">
+		<div
+			th:replace="common/breadcrum :: breadcrumb-section(activePage='Return Policy')"></div>
+		<div class="row primary-background term-strip">
+			<div class="middle-nav-container">RETURN POLICY</div>
+		</div>
+		<div class="col-md-12 col-lg-12 text">
+			<p>We at Wallistry, take utmost care from design to until the
+				product is shipped to you. But if you are unhappy with our products
+				or if you receive it in damaged condition you can choose to return
+				to us as follows.</p>
+			<br />
+			<p class="bold">What is our return policy?</p>
+			<br />
+			<p>At Wallistry we process only store credit/replacements and no
+				direct refunds. You will either receive a store credit or
+				replacement for the following conditions.</p>
+			<p>1. If you are unhappy with our product and wish to return or
+				exchange an item, please email our Customer Care at
+				wallistry@gmail.com.</p>
+			<p>The item(s) should be unused, unsoiled and unwashed.</p>
+			<p>The packaging should have the original packaging and tags in
+				place.</p>
+			<p>Any returned item received by us that does not meet the above
+				mentioned conditions will not be accepted. No amount will be
+				reimbursed in this case.</p>
+			<p class="bold">For the above condition, you will get a Wallistry
+				store credit which can be used for your future purchase with us.</p>
+			<p>2. If you receive the product in a damaged condition, you can
+				email us with pictures or call us within 48 hours of delivery. Our
+				team will assess the damage and will get back to you immediately.</p>
+			<p class="bold">For the above condition, you will receive a
+				replacement of the same product of the same product value.</p>
+			<p class="bold">How do I return?</p>
+			<p>You can return the product through a cost effective courier
+				service to the following address.</p>
+			<address>
+				No.5, L.B road, Ist street, Indira Nagar,<br /> Adyar, Chennai-600
+				020
+			</address>
+			<p class="bold">Can Wallistry pick up the product from my
+				address?</p>
+			<p>Sorry. Unfortunately we won’t be able to arrange for pickup to
+				your location.</p>
+			<p class="bold">Will you reimburse the courier charge that was
+				paid to ship the product back to you?</p>
+			<p>Yes. We will reimburse your courier fee once we ship your
+				replacement/exchange product to you. To avail that, please email us
+				the bill copy from the respective courier company you used for self
+				shipping to wallistry@gmail.com.</p>
+			<p class="bold">What is your refund policy?</p>
+			<p>In case the replacement product is out of stock, you will
+				receive a full refund to your bank account. Refund amount will be
+				the full value of the order, without the shipping charge. Shipping
+				charge is non-refundable.</p>
+			<p class="bold">What are the other issue that DOES NOT qualify
+				for store credit/replacement?</p>
+			<ul>
+				<li>Measurements/dimensions of the products are approximate
+					only to allow you to understand the approximate size of the
+					product. Therefore the actual product dimension delivered to you
+					may sometimes slightly vary.</li>
+				<li>The actual colour of the product may slightly vary from the
+					photographs displayed on the website.</li>
+			</ul>
+			<p>In the above cases, replacement or store credit for/of the product is not acceptable.</p>
+		</div>
+	</div>
+	<footer th:replace="common/footer :: footer"></footer>
+	<div th:replace="common/header :: before-body-script"></div>
+</body>
+</html>

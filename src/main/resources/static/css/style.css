@@ -7,6 +7,9 @@
 html, body {
 	overflow-x: hidden;
 }
+.logo{
+	font-family:'Raleway', sans-serif;
+}
 
 .bold {
 	font-weight: 700;
@@ -24,7 +27,15 @@ html, body {
 .spacing-top {
 	margin-top: 30px
 }
+.p15{
+	padding-top: 15px;
+	padding-bottom :15px;
+}
 
+.spacing{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
 .navbar {
 	margin-bottom: 0px;
 }
@@ -121,6 +132,7 @@ html, body {
 
 .sitemap-footer {
 	height: 150px;
+	background-color: #E0E0E0;
 }
 
 .content-margin {
@@ -258,6 +270,7 @@ p.collection-title {
 	margin-left: 3%;
 	width: 94%;
 }
+
 /* buy now */
 .breadcrumb {
 	background-color: white;
@@ -449,6 +462,14 @@ img.zoomImg {
 .bx-wrapper .bx-controls-direction a.disabled {
 	display: none;
 }
+
+.mt-1{
+	margin-top:10px
+}
+.mb-1{
+	margin-bottom:10px;
+}
+
 /*Tabs */
 
 /* Portrait and Landscape */

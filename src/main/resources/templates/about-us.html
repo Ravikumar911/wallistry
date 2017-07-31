@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: common-header" />
+<body>
+	<nav th:replace="common/nav :: common-nav"></nav>
+	<div class="container-fluid">
+		<div
+			th:replace="common/breadcrum :: breadcrumb-section(activePage='About Us')"></div>
+		<div class="row">
+			<div class="col-lg-12 col-sm-12 col-md-12 text-center bold">ABOUT
+				US</div>
+		</div>
+		<div class="row secondary-background text-color spacing">
+			<div class="col-lg-offset-1 col-sm-10 col-md-10 col-lg-10">We
+				at Wallistry design and create interesting products for you and your
+				living space. We work with fine artisans in India, bringing together
+				different craftsmanship to one medium. Be it pottery, wood, metal or
+				bamboo, we love creating expressions using diverse materials through
+				our design.</div>
+			<div class="col-lg-offset-1 col-sm-1 col-md-10 col-lg-10 spacing-top">
+				Each product we create, goes a through journey, has a story-
+				designed by an artist, crafted by artisans, packed and shipped with
+				love, and then you have a story to tell.</div>
+		</div>
+		<div class="row spacing-top">
+			<div class="col-lg-offset-1 col-sm-10 col-md-10 col-lg-10">
+				<div class="col-lg-4 col-sm-4 col-md-4 text-center">
+					<img src="/images/aboutus/Design Graphic.svg" />
+					<div class="col-lg-sm-12 bold text-center p15">DESIGN</div>
+					<div>We work with simple and functional design. We stay true
+						to the traditional roots giving a contemporary outlook through
+						design.</div>
+				</div>
+				<div class="col-lg-4 col-sm-4 col-md-4 text-center">
+					<img src="/images/aboutus/Artistry Graphic.svg" />
+					<div class="col-lg-sm-12 bold text-center p15">ARTISTRY</div>
+					<div>We work with creative artists and artisans in India who
+						are also growing in numbers.</div>
+				</div>
+				<div class="col-lg-4 col-sm-4 col-md-4 text-center">
+					<img src="/images/aboutus/Community Graphic.svg" />
+					<div class="col-lg-sm-12 bold text-center p15">COMMUNITY</div>
+					<div>We believe that feedback help improve our products. Our
+						designs are a result of feedback from the community.</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<footer th:replace="common/footer :: footer"></footer>
+	<div th:replace="common/header :: before-body-script"></div>
+</body>
+</html>
