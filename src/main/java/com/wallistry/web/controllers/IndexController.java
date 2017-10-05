@@ -32,29 +32,28 @@ public class IndexController {
 
 	@RequestMapping("/privacy-policy")
 	public String privacy() {
-		return "/privacy-policy";
+		return "privacy-policy";
 	}
 
 	@RequestMapping("/return-policy")
 	public String returnPolicy() {
-		return "/return-policy";
+		return "return-policy";
 	}
 
 	@RequestMapping("/contact-us")
 	public String contactUs() {
-		return "/contact-us";
+		return "contact-us";
 	}
 	@RequestMapping("/about-us")
 	public String aboutUs() {
-		return "/about-us";
+		return "about-us";
 	}
 	@RequestMapping("/terms-conditions")
 	public String termsAndCondition() {
-		return "/terms-conditions";
+		return "terms-conditions";
 	}
 	@RequestMapping("/faqs")
 	public String faqs(){
-		return "/faqs";
+		return "faqs";
 	}
-
 }

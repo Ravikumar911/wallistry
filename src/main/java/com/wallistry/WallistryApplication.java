@@ -14,7 +14,6 @@ import com.google.api.client.json.JsonFactory;
 import com.google.api.client.util.store.FileDataStoreFactory;
 
 import com.google.api.services.gmail.GmailScopes;
-import com.google.api.services.gmail.model.*;
 import com.google.api.services.gmail.Gmail;
 
 import java.io.IOException;
