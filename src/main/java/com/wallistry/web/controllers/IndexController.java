@@ -9,7 +9,10 @@ public class IndexController {
 	public String home() {
 		return "index";
 	}
-
+	@RequestMapping("/homeware")
+	public String homeware() {
+		return "homeware";
+	}
 	@RequestMapping("/bottle")
 	public String bottle() {
 		return "bottle";

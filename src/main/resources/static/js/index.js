@@ -6,8 +6,12 @@ $(document).ready(function(){
 		autoplay:true,
 		autoplayTimeout:2000,
 	    items:1,
+	    dots:false,
 	    animateOut: 'fadeOut',
-	    video:true
+	    video:true,
+	    nav    : true,
+	     navText : ["<span class='icon icon-arrow-left'></span>","<span class='icon icon-arrow-right'></span>"]
+	   
 	});
 	
 	$("#sendSubscriptionEmail").click(function(){
