@@ -59,4 +59,16 @@ public class IndexController {
 	public String faqs(){
 		return "faqs";
 	}
+	@RequestMapping("/seller-home")
+		public String sellerHome(){
+			return "sellerhome";
+	}
+	@RequestMapping("/seller-dashboard")
+	public String sellerDashboard(){
+		return "seller-dashboard";
+	}
+	@RequestMapping("/seller-inventory")
+	public String sellerInventory(){
+		return "seller-inventory";
+	}
 }
