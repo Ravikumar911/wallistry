@@ -6,7 +6,7 @@
 	<nav th:replace="common/nav :: common-nav"></nav>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="owl-carousel owl-theme">
+			<div class="owl-carousel owl-theme" id="home-owl-carousel">
 				<div>
 					<img
 						srcset="/images/banner_01.jpg 2000w, /images/banner_mobile_01.jpg 600w"
@@ -22,28 +22,38 @@
 						srcset="/images/banner_03.jpg 2000w, /images/banner_mobile_01.jpg 600w"
 						style="width: 100%" />
 				</div>
+				<div>
+					<img
+						srcset="/images/banner_02.jpg 2000w, /images/banner_mobile_01.jpg 600w"
+						style="width: 100%" />
+				</div>
 			</div>
 		</div>
 		<div class="row card story">
 			<div class="col-lg-12 va-center">
 				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-					<p class="title-head">Crafted for You</p>
-				</div>
-				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-					<p class="title-tagline">We believe in designing products that inspire you every moment.</p>
+					<p class="title-head">Conscious Basics</p>
 				</div>
 				<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt">
-					We identify and work with communities of artists and artisans in India. Our products are designed with a conscious effort to make a difference to
-					your life and the environment. We do not mass produce, hence every tiny piece of wooden tableware or earthenware we make is uniquely crafted
-					just for you, to suit your lifestyle.
+					We believe small details can inspire you to live a conscious lifestyle. Our lifestyle products are designed with 
+					thoughtful choice of function, materials and aesthetics. Our process involved in designing and working with community of
+					artists and artisans in India to craft culturality relevant products. We make basics for better living.
 					</div>
+						<div class="col-lg-12 col-sm-12 col-md-12 text-center button-position">
+							<button class="button-alt">Know our story</button>
+						</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-sm-12 col-md-12 text-center item-title">
+				BEST SELLERS
 			</div>
 		</div>
 		<div class="row item-section">
 			<div class="col-lg-4 col-sm-12 item">
 				<div class="col-lg-12 card">
 					<div class="title">
-						<span class="item-name center">KRIYA</span>
+						
 					</div>
 					<a href="/notebook"><img class="item-img-size center-block"
 						src="/images/tab_notebook.jpg" alt="txt" /></a>
@@ -53,7 +63,7 @@
 			<div class="col-lg-4 col-sm-12 item">
 				<div class="col-lg-12 card">
 					<div class="title">
-						<span class="item-name center">BHUMI</span>
+						
 					</div>
 					<a href="/bottle"><img class="item-img-size center-block"
 						src="/images/tab_waterbottle.jpg" alt="txt" /></a>
@@ -63,7 +73,7 @@
 			<div class="col-lg-4 col-sm-12 item">
 				<div class="col-lg-12 card">
 					<div class="title">
-						<span class="item-name center">VANAA</span>
+					
 					</div>
 					<a href="/coasters"><img class="item-img-size center-block"
 						src="/images/tab_coasters.jpg" alt="txt" /></a>
@@ -71,67 +81,53 @@
 				</div>
 			</div>
 		</div>
-		<div class="row spacing-top">
-			<div class="col-md-6 col-xs-12"><img class=""
-						src="/images/tab_waterbottle.jpg" alt="txt" />
-			</div>
-			<div class="col-md-6 col-xs-12">
-				<div class="story-a">Creative community</div>
-				<div class="story-a-desc">At Wallistry we love to design and collaborate with creative communities.
-					Our work with artisans, involve in understanding their skills and
-					designing with them. When we work with artists, we ideate ideas
-					drawing inspiration from the aesthetics of India's nature and culture. Our
-					love for our country and travel has inspired us to bring out stories of India
-					through the products.
+		<div class="row story-alt">
+			<div class="col-lg-12 va-center">
+				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+					<p class="title-alt-head">Gifting - Inspire a community</p>
 				</div>
-			</div>
-		</div>
-		<div class="row spacing-top">
-		<div class="col-md-6 col-xs-12">
-		<div class="story-b">Responsible shopping</div>
-				<div class="story-b-desc">Our commitment towards designing natural products brought us closer
-					in creating an environment conscious living as well. We have
-					collaborated with Grow-Trees organization so that you can plant trees in
-					rural communities, wildlife, forests etc. Yes, you can. For every product
-					you purchase from Wallistry, a contribution is made for making a
-					greener future.
-				</div>
-			</div>
-			<div class="col-md-6 col-xs-12"><img class=""
-						src="/images/tab_waterbottle.jpg" alt="txt" />
-			</div>
-		</div>
-		<div class="row artist_text">
-			<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 title va-center">
-				<p>13 Arstists, artisans and still growing</p>
+				<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt">
+					 Make art of giving easier by gifting thoughtful and creative and lifestyle products.
+					</div>	
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-				<p class="bold">OUR BLOG</p>
-			</div>
-			<div class="col-md-offset-2 col-md-8 text-center col-xs-12 blogtext">At Wallistry, we believe a blog is the best medium to express our interests to the
+		<div class="col-lg-6 gifting-a" >
+		<img class="gift-img-size"
+						src="/images/corporate.jpg" alt="txt" />
+		<a href="/corporate-gifting"><button align="center" class="button-alt button-gift">CORPORATE GIFTING</button></a>
+		</div>
+		<div class="col-lg-6 gifting-b">
+		<img class="gift-img-size"
+						src="/images/corporate.jpg" alt="txt" />
+		<a href="/event-gifting"><button class="button-alt button-gift">EVENT GIFTING</button></a>
+		</div>
+		</div>
+		<div class="row card-gift story">
+			<div class="col-lg-12 va-center">
+				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+					<p class="title-head">Blog</p>
+				</div>
+				<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt">
+					At Wallistry, we believe a blog is the best medium to express our interests to the
 			community. We explore interesting stories of people and their works from
 			different walks of life- design, craft and travel. We love to share some of the best
-			stories with you.</div>
-			<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-				<button class="read-more-btn">Read More</button>
+			stories with you.
+					</div>
+						<div class="col-lg-12 col-sm-12 col-md-12 text-center button-position">
+							<button class="read-more-btn">Read More</button>
+						</div>
 			</div>
-			</div>
+		</div>
 			<div class="row">
 			<div class="col-lg-12 col-sm-12 col-md-12 text-center insta-content">
 				<p class="bold">INSTAGRAM</p>
-			</div></div><div class="row">
-			<div class="col-lg-2 col-lg-offset-1 instaPic"><img class=""
-						src="/images/tab_waterbottle.jpg" alt="txt" /></div>
-			  <div class="col-lg-2 instaPic"><img class=""
-						src="/images/tab_waterbottle.jpg" alt="txt" /></div>
-			  <div class="col-lg-2 instaPic"><img class=""
-						src="/images/tab_waterbottle.jpg" alt="txt" /></div>
-			  <div class="col-lg-2 instaPic"><img class=""
-						src="/images/tab_waterbottle.jpg" alt="txt" /></div>
-			  <div class="col-lg-2 instaPic"><img class=""
-						src="/images/tab_waterbottle.jpg" alt="txt" /></div>
+			</div>
+			<div class="col-sm-2 col-sm-offset-1 instaPic">pic1</div>
+			  <div class="col-sm-2 instaPic">pic2</div>
+			  <div class="col-sm-2 instaPic">pic3</div>
+			  <div class="col-sm-2 instaPic">pic4</div>
+			  <div class="col-sm-2 instaPic">pic5</div>
 			<!-- <div
 				class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center spacing-top">
 				<p class="bold">FEATURED VIDEOS</p>

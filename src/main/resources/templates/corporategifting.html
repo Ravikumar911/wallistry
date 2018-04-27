@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: common-header">
+</head>
+<body>
+	<nav th:replace="common/nav :: common-nav"></nav>
+	<div class="row card story">
+			<div class="col-lg-12 va-center">
+				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+					<p class="title-alt-head">Corporate gifting</p>
+				</div>
+				<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt">
+					<p>Wallistry’s products are designed keeping in mind the functional relevance and material elegance to enhance conscious lifestyle. We
+					work with brands and organisations to customise logos at every possible end- from product to packaging.
+					</p>
+					<p>Our products have inspired people to create a conscious lifestyle and branding with us, you can inspire a community more.
+					</p>
+					</div>
+			</div>
+	</div>
+	<div class="row" style="margin:100px">
+			<div class="owl-carousel owl-carousel-gift owl-theme">
+				<div>
+					<img
+						srcset="/images/banner_01.jpg 2000w, /images/banner_mobile_01.jpg 600w"
+						style="width: 100%" />
+				</div>
+				<div>
+					<img
+						srcset="/images/banner_02.jpg 2000w, /images/banner_mobile_01.jpg 600w"
+						style="width: 100%" />
+				</div>
+				<div>
+					<img
+						srcset="/images/banner_03.jpg 2000w, /images/banner_mobile_01.jpg 600w"
+						style="width: 100%" />
+				</div>
+				<div>
+					<img
+						srcset="/images/banner_01.jpg 2000w, /images/banner_mobile_01.jpg 600w"
+						style="width: 100%" />
+				</div>
+			</div>
+	</div>
+	<div class="row card">
+		<div class="col-lg-12">
+				<div class="text-center">
+					<p class="title-head">To get started</p>
+					<div class="form">
+				
+					<form action="" method="post" id="contactFrm" name="contactFrm">
+					<div class="field">
+                	<label>NAME*</label>
+                	<input type="text" required="true" placeholder="Name..." value="" name="name" class="txt"/>
+					</div>
+					<div class="field">
+                	<label>EMAIL*</label>
+					<input type="email" required="true" placeholder="Email..." value="" name="email" class="txt"/>               	
+					</div>
+					<div class="field">
+       				<label>COMPANY</label>
+       				<input type="text" placeholder="Company name..." value="" name="companyname" class="txt"/>		
+					</div>
+                	<div class="field">
+       				<label>PHONE*</label>
+       				<input type="text" required="true" placeholder="Phone number..." value="" name="phoneno" class="txt"/>	
+       				</div>
+       				<div class="field">
+       				<label>MESSAGE*</label>
+       				<textarea placeholder="Message..." name="mess" type="text" class="txt_3"></textarea>
+       				</div>
+                	</form>
+            </div>
+				</div>
+		</div>
+	</div>
+	<footer th:replace="common/footer :: footer"></footer>
+	<div th:replace="common/header :: before-body-script"></div>
+	<script th:src="@{/js/owlcarousel/owl.carousel.min.js}"></script>
+	<script th:src="@{/js/index.js}"></script>
+</body>
+</html>

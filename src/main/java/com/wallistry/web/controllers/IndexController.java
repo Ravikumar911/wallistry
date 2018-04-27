@@ -9,15 +9,17 @@ public class IndexController {
 	public String home() {
 		return "index";
 	}
-	@RequestMapping("/homeware")
-	public String homeware() {
-		return "homeware";
-	}
+
 	@RequestMapping("/bottle")
 	public String bottle() {
 		return "bottle";
 	}
-
+	
+	@RequestMapping("/homeware")
+	public String homeware(){
+		return "homeware";
+	}
+	
 	@RequestMapping("/coasters")
 	public String coasters() {
 		return "coasters";
@@ -58,6 +60,22 @@ public class IndexController {
 	@RequestMapping("/faqs")
 	public String faqs(){
 		return "faqs";
+	}
+	@RequestMapping("/corporate-gifting")
+		public String corpGift(){
+			return "corporategifting";
+	}
+	@RequestMapping("/event-gifting")
+		public String eventGift(){
+		return "eventgifting";
+	}
+	@RequestMapping("/stationery")
+		public String stationery(){
+		return "stationery";
+	}
+	@RequestMapping("/diybook")
+		public String diybook(){
+		return "diynote";
 	}
 	@RequestMapping("/seller-home")
 		public String sellerHome(){

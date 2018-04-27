@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="common/header :: common-header">
-</head>
+<head th:replace="common/header :: common-header" />
 <body>
-	<nav th:replace="common/nav :: common-nav"></nav>
+<nav th:replace="common/nav :: common-nav"></nav>
 	<div class="container-fluid">
 	<div class="row">
 	<div class="col-md-offset-1">
 			<ul class="breadcrumb">
 				<li><a href="/">Home</a></li>
-				<li><a href="/homeware">Dining</a></li>
-				<li class="active">Wooden coasters</li>
+				<li><a href="/stationery">Stationery</a></li>
+				<li class="active">DIY Notebook</li>
 			</ul>
 		</div>
 		</div>
-				<div class="row">
+						<div class="row">
 			<div class="col-lg-6">
 				<div id="fullImg" class="col-lg-7">
 					<img data-image-id="" src="images/buy-notebook.png" alt='' title="" />
@@ -65,14 +64,19 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-							<p class="buy-item-title">VANAA</p>
+							<p class="buy-item-title">PUNAI</p>
 						</div>
 						<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-							<p class="buy-item-type">WOODEN COASTERS (pack of 6)</p>
+							<p class="buy-item-type">DIY NOTEBOOK</p>
 						</div>
 					</div>
 					<div class="col-lg-12 text-center min-spacing-top">
-						<p class="buy-item-price">Rs.640</p>
+						<p class="buy-item-price">Rs.480</p>
+					</div>
+					<div class="col-lg-12 col-sm-12 col-md-12 text-center">
+					<select>
+						<option>Set of 2</option>
+					</select>
 					</div>
 					<div class="col-lg-12 text-center min-spacing-top">
 						<div class="buy-item-price">
@@ -102,18 +106,20 @@
 					<div class="col-lg-12 spacing-top item-specs">
 						<div class="nav-section">
 							<ul class="nav nav-tabs nav-justified">
-								<li class="active"><a data-toggle="tab" href="#menu1">CONTENTS</a></li>
-								<li><a data-toggle="tab" href="#menu2">SPECIFICATIONS</a></li>
-								<li><a data-toggle="tab" href="#menu3">CARE&nbsp;AND&nbsp;INFO</a></li>
-								<li><a data-toggle="tab" href="#menu4">COLLECTIONS</a></li>
+								<li class="active"><a data-toggle="tab" href="#menu1">SPECIFICATIONS</a></li>
+								<li><a data-toggle="tab" href="#menu2">CARE&nbsp;AND&nbsp;INFO</a></li>
+								<li><a data-toggle="tab" href="#menu3">SHIPPING AND DELIVERY</a></li>
 							</ul>
 						</div>
 						<div class="tab-content">
 							<div id="menu1" class="tab-pane fade in active">
 								<ul>
-									<li>Diameter: 9cm (appx.)</li>
-									<li>Thickness: 1cm (appx.)</li>
-									<li>Material: Wood (set of 6)</li>
+									<li>Width:16.2cm</li>
+									<li>Height: 19.7cm</li>
+									<li>Material: 90 gsm, natural shade</li>
+									<li>No.of pages: 60 (each notebook)</li>
+									<li>Add-ons: Stencils</li>
+									<li>Thickness of wood: 4mm thick wood veneer</li>
 								</ul>
 							</div>
 							<div id="menu2" class="tab-pane fade">
@@ -138,14 +144,6 @@
 										actual colour might differ slightly.</li>
 								</ul>
 							</div>
-							<div id="menu4" class="tab-pane fade">
-								<ul>
-									<li>Buy 2 bottles- Rs- 708 (save 90)</li>
-									<li>Buy 3 bottles –Rs 1047 (save 150)</li>
-									<li>TBuy 4 bottles- Rs 1326 (save 270)</li>
-								</ul>
-								For bulk orders, click <a href="#">Gifting</a>.
-							</div>
 						</div>
 					</div>
 					<div class="col-lg-12 min-spacing-top">
@@ -162,20 +160,20 @@
 				</div>
 			</div>
 		</div>
-				<div class="row card story">
+		<div class="row card story-alt">
 			<div class="col-lg-12 va-center">
 				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-					<p class="title-head">Nature’s ring for the drink</p>
+					<p class="title-head">DIY - Design it yourself</p>
 				</div>
 				<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt">
-					Handcrafted from Acacia tree, an excellent timber wood, the wooden coasters retain the original
-					form, its rings and the colour. This colour contrast in its rings, add luxury and a natural essence to
-					your table.
+					The DIY notebook is designed to reflect your personality. The cover is simple, plain and graphic free- a
+					canvas for you to create. In addition, it comes with Wallistry’s DIY add-ons containing, stencils . From
+					brainstorming, concept arriving, doodling, quick notes, writing etc, DIY notebook is the perfect tool for
+					everyday needs.
 					</div>
 			</div>
 		</div>
-		<!-- <a class="floating-btn" href="/buynow">BUY NOW</a> -->
-				<div class="row">
+		<div class="row">
 		<div class="col-lg-6 gifting-a" >
 		<img class="gift-img-size"
 						src="/images/corporate.jpg" alt="txt" />
@@ -185,46 +183,38 @@
 						src="/images/corporate.jpg" alt="txt" />
 		</div>
 		</div>
-
-<div th:replace="common/item :: features-heading(title='Features')"></div>
+		<div th:replace="common/item :: features-heading(title='Features')"></div>
 <div class="row spacing-top">
 		<div class="col-lg-12">
-				<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Natural form',
-								description='Each wooden coaster is
-								unique, has its own natural form, colour and ring structure.')"></div>
-				<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Source',
-								description='The wooden coasters are
-								made from trees sourced
-								from renewable forests.')"></div>
-			<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Non-Slippery',
-								description='Keeping the cup in hurry on
-								the coasters without noticing
-								it? Dont worry, it doesnt slip.
-								The coasters finished in
-								matte, keep your cup in
-								place.')"></div>
-				<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Durability',
-								description='The wooden coaster is crafted
-								to be durable as it is thicker
-								in size to avoid it from
-								breakage.')"></div>
+				<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Brand-free front cover',
+								description='The cover is plain, graphic
+								free and logo free. It’s all
+								yours to create.')"></div>
+				<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Add-ons',
+								description='The DIY notebook includes
+								alphabet and geometric
+								stickers- Tools to design on
+								the canvas.
+								and artworks for years.')"></div>
+			<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Round cornered edges',
+								description='The round cornered edges
+								keep the DIY notebooks in
+								style, giving it a
+								contemporary look.')"></div>
 		</div>
-		</div>
-		<div class="row">
-		<div class="margin-image">
-		<img src="/images/coaster_01.jpg" style="width: 100%" />
-		</div>
+</div>
+<div class="row">
+<div class="margin-image"><img src="/images/coaster_01.jpg" style="width: 100%" /></div>
 			
-		</div>
+</div>
 		<div class="row spacing-top">
 			<div class="col-lg-12">
 				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-					<p class="italic tag-text-alt">“THE EARTH HAS ITS MUSIC FOR THOSE
-						WHO WILL LISTEN”</p>
+					<p class="italic tag-text-alt">“CREATIVITY IS INTELLIGENCE HAVING FUN”</p>
 				</div>
 			</div>
 		</div>
-		<div class="row card story-alt-text">
+			<div class="row card story-alt-text">
 			<div class="col-lg-12 va-center">
 				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
 					<p class="title-text">YOU MAY ALSO LIKE</p>
@@ -237,9 +227,8 @@
 					
 					<a href="/bottle"><img class="item-img-size center-block"
 						src="/images/tab_notebook.jpg" alt="txt" /></a>
-					<div class="text-center item-type">Himalayan musk
-							Wooden notebook (Regular)</div>
-					<div class="text-center item-type-cost">Rs.890</div>
+					<div class="text-center item-type">Wooden Coasters(pack of 6)</div>
+					<div class="text-center item-type-cost">Rs.640</div>
 				</div>
 			</div>
 			<div class="col-lg-4 col-sm-12 item">
@@ -256,17 +245,17 @@
 				
 					<a href="/coasters"><img class="item-img-size center-block"
 						src="/images/tab_coasters.jpg" alt="txt" /></a>
-					<div class="text-center item-type">DIY Notebook</div>
-					<div class="text-center item-type-cost">from Rs.250</div>
+					<div class="text-center item-type">Himalayan musk
+							Wooden Notebook (Regular)</div>
+					<div class="text-center item-type-cost">Rs.890</div>
 				</div>
 			</div>
 		</div>
-	</div>
+		</div>
 	<footer th:replace="common/footer :: footer"></footer>
 	<div th:replace="common/header :: before-body-script"></div>
 	<script th:src="@{/js/jquery.bxslider.js}"></script>
 	<script th:src="@{/js/jquery.zoom.min.js}"></script>
 	<script th:src="@{/js/buy-now.js}"></script>
-	<input type="hidden" value="coasters" id="active-nav"/>
 </body>
 </html>

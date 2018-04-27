@@ -20,8 +20,10 @@
 			<div class="col-lg-12 col-sm-12 col-md-12 text-center">
 				<p class="content-title" th:text="${type}"></p>
 			</div>
-			<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt"><p th:text="${description1}"></p></div>
-			<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt"><p th:text="${description2}"></p></div>			
+			<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt"
+				th:text="${description1}"></div>
+			<div class="col-md-offset-2 col-md-8 text-center col-xs-12 desc-txt"
+				th:text="${description2}"></div>			
 		</div>
 	</div>
 	<div class="row" th:fragment="main-img-section(image)">
@@ -42,7 +44,7 @@
 	<div class="row spacing-top" th:fragment="features-heading(title)">
 		<div class="col-lg-12">
 			<div class="col-lg-12 col-sm-12 col-md-12 text-center">
-				<p class="title-features" style="color:#CD6632" th:text="${title}">FEATURES</p>
+				<p class="title-features"  th:text="${title}">FEATURES</p>
 			</div>
 		</div>
 	</div>
@@ -56,7 +58,7 @@
 				<div class="col-lg-12 col-sm-12 col-md-12 text-center">
 					<p class="title" th:text="${title}"></p>
 				</div>
-				<div class="col-lg-12 col-xs-12" th:text="${description}"></div>
+				<div class="col-lg-12 col-xs-12 feature-text" th:text="${description}"></div>
 			</div>
 		</div>
 	</div>
@@ -71,7 +73,7 @@
 				<div class="col-lg-12 col-sm-12 col-md-12 text-center" style="padding:16px;">
 					<p class="title" th:text="${title}"></p>
 				</div>
-				<div class="col-lg-12 col-xs-12 feature-desc" th:text="${description}"></div>
+				<div class="col-lg-12 col-xs-12" th:text="${description}"></div>
 			</div>
 		</div>
 	</div>

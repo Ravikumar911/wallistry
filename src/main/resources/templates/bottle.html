@@ -5,14 +5,15 @@
 <body>
 	<nav th:replace="common/nav :: common-nav"></nav>
 	<div class="container-fluid">
-
-		<div class="row">
-			<div class="col-md-offset-1">
-				<ul class="breadcrumb">
-					<li><a href="/homeware">Homeware</a></li>
-					<li class="active">Terracotta Water Bottle(1 Ltr)</li>
-				</ul>
-			</div>
+	
+	<div class="row">
+	<div class="col-md-offset-1">
+			<ul class="breadcrumb">
+				<li><a href="/">Home</a></li>
+				<li><a href="/homeware">Dining</a></li>
+				<li class="active">Terracotta Water Bottle(1 Ltr)</li>
+			</ul>
+		</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-6">
@@ -31,15 +32,15 @@
 							</a>
 						</div>
 						<div class="slide">
-							<a href="images/buy-notebook.png" data-image-id="2"
+							<a href="images/tab_coasters.png" data-image-id="2"
 								class="previewImg"> <img class="thumbnails"
-								src="images/buy-notebook.png" data-image-id="2" alt="" />
+								src="images/tab_coasters.png" data-image-id="2" alt="" />
 							</a>
 						</div>
 						<div class="slide">
-							<a href="images/buy-notebook.png" data-image-id="3"
+							<a href="images/notebook.png" data-image-id="3"
 								class="previewImg"> <img class="thumbnails"
-								src="images/buy-notebook.png" data-image-id="3" alt="" />
+								src="images/notebook.png" data-image-id="3" alt="" />
 							</a>
 						</div>
 						<div class="slide">
@@ -47,14 +48,12 @@
 								class="previewImg"> <img class="thumbnails"
 								src="images/buy-notebook.png" data-image-id="4" alt="" />
 							</a>
-						</div>
-						<div class="slide">
+						</div><div class="slide">
 							<a href="images/buy-notebook.png" data-image-id="5"
 								class="previewImg"> <img class="thumbnails"
 								src="images/buy-notebook.png" data-image-id="5" alt="" />
 							</a>
-						</div>
-						<div class="slide">
+						</div><div class="slide">
 							<a href="images/buy-notebook.png" data-image-id="6"
 								class="previewImg"> <img class="thumbnails"
 								src="images/buy-notebook.png" data-image-id="6" alt="" />
@@ -64,7 +63,7 @@
 				</div>
 			</div>
 			<div class="col-lg-5">
-				<div class="row">
+				<div class="row item-section">
 					<div class="col-lg-12">
 						<div class="col-lg-12 col-sm-12 col-md-12 text-center">
 							<p class="buy-item-title">BHUMI</p>
@@ -77,11 +76,10 @@
 						<p class="buy-item-price">Rs. 540</p>
 					</div>
 					<div class="col-lg-12 text-center min-spacing-top">
-						<div class="buy-item-price">
+						<div class="buy-item-qty">
 							<p>
 								<span>QTY&nbsp;&nbsp;</span> <span>
-									<button type="button" class="btn btn-number" data-type="minus"
-										data-field="quant[1]">
+									<button type="button" class="btn btn-number" data-type="minus" data-field="quant[1]">
 										<span class="glyphicon glyphicon-minus"></span>
 									</button>
 								</span> <input type="text" name="quant[1]" class="input-number"
@@ -108,7 +106,7 @@
 								<li class="active"><a data-toggle="tab" href="#menu1">CONTENTS</a></li>
 								<li><a data-toggle="tab" href="#menu2">SPECIFICATIONS</a></li>
 								<li><a data-toggle="tab" href="#menu3">CARE&nbsp;AND&nbsp;INFO</a></li>
-								<!-- <li><a data-toggle="tab" href="#menu4">COLLECTIONS</a></li> -->
+								<li><a data-toggle="tab" href="#menu4">COLLECTIONS</a></li>
 							</ul>
 						</div>
 						<div class="tab-content">
@@ -143,9 +141,9 @@
 							</div>
 							<div id="menu4" class="tab-pane fade">
 								<ul>
-									<li>Buy 2 bottles - Rs- 708 (save 90)</li>
-									<li>Buy 3 bottles – Rs 1047 (save 150)</li>
-									<li>TBuy 4 bottles - Rs 1326 (save 270)</li>
+									<li>Buy 2 bottles- Rs- 708 (save 90)</li>
+									<li>Buy 3 bottles –Rs 1047 (save 150)</li>
+									<li>TBuy 4 bottles- Rs 1326 (save 270)</li>
 								</ul>
 								For bulk orders, click <a href="#">Gifting</a>.
 							</div>
@@ -154,19 +152,18 @@
 					<div class="col-lg-12 min-spacing-top">
 						<p class="title-color">SHIPPING</p>
 						<p>
-							Shipping cost is FREE for products above Rs.2000<br /> Shipping
-							cost is Rs.60 for products below Rs.2000
+							Shipping cost is FREE for products above Rs.2000<br /> Shipping cost is Rs.60 for products below Rs.2000
 						</p>
 					</div>
 					<div class="col-lg-12">
 						<p class="title-color">DELIVERY</p>
-						<p>Since most of our products are made, it may take 5-10 days
-							to deliver.</p>
+						<p>Since most of our products are made, it may take
+							5-10 days to deliver.</p>
 					</div>
 				</div>
 			</div>
 		</div>
-
+	
 		<!-- <a class="floating-btn" href="/buynow">BUY NOW</a> -->
 		<!-- <div
 			th:replace="common/item :: heading-section(title='BHUMI',
@@ -179,39 +176,64 @@
 		<div th:replace="common/item :: main-img-section(image='MAIN PAGE_01.jpg')"></div>
 		<div th:replace="common/item :: sub-img-section(image1='MAIN PAGE_02.jpg',image2='MAIN PAGE_03.jpg')"></div> -->
 		<div
-			th:replace="common/item :: content-section(type='Bottle for healthier living',description1='The terracotta water bottle is crafted to inspire a healthier lifestyle, reviving the traditional use of earthernware, designed with a contemporary outlook. Made from natural clay (earth), it keeps the water cool all day. It is handmade by the artisans of Tamil Nadu.',description2='Wallistry works with two different artisan communities to create this product. We work with potter’s family and cane craftsman.')"></div>
-		<div class="row">
-			<div class="col-md-6 desc-img">
-				<img data-image-id="" src="images/page.png" alt='' title="" />
-			</div>
-			<div class="col-md-6 desc-img">
-				<img data-image-id="" src="images/page.png" alt='' title="" />
-			</div>
+			th:replace="common/item :: content-section(type='Bottle for healthier living',
+			description1='The terracotta water bottle is crafted to inspire a healthier lifestyle, reviving the traditional use of earthernware,
+			designed with a contemporary outlook. Made from natural clay (earth), it keeps the water cool all
+			day. It is handmade by the artisans of Tamil Nadu.',description2='Wallistry works with two different artisan communities to create this product. We work with potter’s
+			family and cane craftsman.')"></div>
+		<div class="col-lg-6 gifting-a" >
+		<img class="gift-img-size"
+						src="/images/corporate.jpg" alt="txt" />
+		</div>
+		<div class="col-lg-6 gifting-b">
+		<img class="gift-img-size"
+						src="/images/corporate.jpg" alt="txt" />
 		</div>
 		<div th:replace="common/item :: features-heading(title='FEATURES')"></div>
 		<div class="row spacing-top">
-			<div class="col-lg-12">
-				<div
-					th:replace="common/item :: new-features-item-section(image='1.svg',title='Handmade', description='A complete handmade product. Handcrafted by two communities- pottery and cane artisans.')"></div>
-				<div
-					th:replace="common/item :: new-features-item-section(image='1.svg',title='Ergonomic design', description='Designed with smart dimensions, arriving at a comfortable shape for the user.')"></div>
-				<div
-					th:replace="common/item :: new-features-item-section(image='1.svg',title='Material Fusion', description='A fusion of clay, cane and corkeach being a natural material is fused to make a functional product.')"></div>
-				<div
-					th:replace="common/item :: new-features-item-section(image='1.svg',title='Smart Open-Close', description='Cane is twined with lid (cork), avoiding the lid to fall.')"></div>
-			</div>
-			<div class="col-lg-12">
-				<div
-					th:replace="common/item :: new-features-item-section(image='1.svg',title='Cane Craft', description='Cane artisans work with a unique system to interlock the material with lid. No glue is used.')"></div>
-				<div
-					th:replace="common/item :: new-features-item-section(image='1.svg',title='Natural cooling', description='The terracotta water bottle keeps the water cool in a natural way.')"></div>
-				<div
-					th:replace="common/item :: new-features-item-section(image='1.svg',title='Eco- Friendly', description='Made from clay, the terracotta water bottle is environmentally sustainable.')"></div>
-				<div
-					th:replace="common/item :: new-features-item-section(image='1.svg',title='Healthy Lifestyle', description='Water is one of the most vital sources for human survival. The terracotta water bottle is designed to create a conscious effort to inspire a healthier lifestyle.')"></div>
-			</div>
-
-			<!-- 		<div class="col-lg-4">
+		<div class="col-lg-12">
+				<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Handmade',
+								description='A complete handmade
+								product. Handcrafted by two
+								communities- pottery and
+								cane artisans.')"></div>
+				<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Ergonomic design',
+								description='Designed with smart
+								dimensions, arriving at a
+								comfortable shape for the user.')"></div>
+				<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Material Fusion',
+								description='A fusion of clay, cane and corkeach
+								being a natural material is
+								fused to make a functional
+								product.')"></div>
+				<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Smart Open-Close',
+								description='Cane is twined with lid (cork),
+								avoiding the lid to fall.')"></div>
+		</div>
+		<div class="col-lg-12">
+		<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Cane Craft',
+								description='Cane artisans work with a
+								unique system to interlock the
+								material with lid. No glue is
+								used.')"></div>
+				<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Natural cooling',
+								description='The terracotta water bottle
+								keeps the water cool in a
+								natural way.')"></div>
+				<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Eco- Friendly',
+								description='Made from clay, the terracotta
+								water bottle is environmentally
+								sustainable.')"></div>
+				<div th:replace="common/item :: new-features-item-section(image='1.svg',title='Healthy Lifestyle',
+								description='Water is one of the most vital
+								sources for human survival.
+								The terracotta water bottle is
+								designed to create a conscious
+								effort to inspire a healthier
+								lifestyle.')"></div>
+		</div>
+		
+	<!-- 		<div class="col-lg-4">
 				<div th:replace="common/item :: features-item-section(image='1.svg',title='LIFESTYLE',
 								description='Water is one of the most
 								vital sources for human survival. The terracotta water bottle is
@@ -230,11 +252,11 @@
 			</div> -->
 		</div>
 		<div
-			th:replace="common/item :: content-section(type='Packaging',description1='At Wallistry, we dont just give you a product, but we curate a package for your lifestyle.',description2='Our terracotta bottle comes in tins which can be multi used. A bookmark or a pinup is designed to remind you to stay hydrated.')"></div>
-		<div class="col-md-12 col-lg-6 col-lg-offset-3 desc-img">
-			<img data-image-id="" src="images/page.png" alt='' title="" />
-		</div>
-
+			th:replace="common/item :: content-section(type='Packaging',
+			description1='At Wallistry, we dont just give you a product, but we curate a package for your lifestyle.',description2='Our terracotta bottle comes in tins which can be multi used. A bookmark or a pinup is designed to remind
+			you to stay hydrated.')"></div>
+			<div class="col-md-12 desc-img"></div>
+			
 		<div class="row spacing-top">
 			<div class="col-lg-12">
 				<div class="col-lg-12 col-sm-12 col-md-12 text-center">

@@ -1,19 +1,20 @@
 $(document).ready(function(){
 	
 	
-	$(".owl-carousel").owlCarousel({
+	$("#home-owl-carousel").owlCarousel({
 		loop:true,
 		autoplay:true,
 		autoplayTimeout:2000,
 	    items:1,
-	    dots:false,
 	    animateOut: 'fadeOut',
-	    video:true,
-	    nav    : true,
-	     navText : ["<span class='icon icon-arrow-left'></span>","<span class='icon icon-arrow-right'></span>"]
-	   
+	    video:true
 	});
-	
+	$(".owl-carousel-gift").owlCarousel({
+		margin:10,
+	    autoWidth:false,
+	    nav:true,
+	    items:1,
+	});
 	$("#sendSubscriptionEmail").click(function(){
 		$.ajax({
 			  method: "POST",
@@ -24,5 +25,5 @@ $(document).ready(function(){
 			    alert( "Data Saved: " + msg );
 			  });
 	})
-	
+
 })
