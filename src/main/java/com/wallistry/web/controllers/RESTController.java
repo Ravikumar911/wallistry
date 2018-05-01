@@ -1,11 +1,13 @@
 package com.wallistry.web.controllers;
 
 import java.awt.image.BufferedImage;
+
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -14,7 +16,9 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,6 +28,12 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.reflect.TypeToken;
+import com.wallistry.model.Customer;
+import com.wallistry.model.ProductItem;
 import com.wallistry.model.Subscription;
 import com.wallistry.web.dao.DashboardDAO;
 
@@ -41,9 +51,57 @@ public class RESTController {
 	}
 
 	@RequestMapping("/getsubscriptioninfo")
-	public List<Subscription> subscriptionInformation() {
+	public void subscriptionInformation(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		List<Subscription> subscriptions = dao.getSubscriptionList();
+		Gson gson = new Gson();
+		JsonElement element = gson.toJsonTree(subscriptions, new TypeToken<List<ProductItem>>() {
+		}.getType());
+		JsonArray jsonArray = element.getAsJsonArray();
+		response.setContentType("application/json");
+		response.getWriter().print(jsonArray);
+
+	}
+	@RequestMapping("/dashboardInfo")
+	public String getDashboardInfo() throws JSONException{
+		String dahboardInfo = dao.getDashboardInfo();
+		return dahboardInfo;
+	}
+	@RequestMapping("/fetchBannerText")
+	public String fetchBannerText(HttpServletRequest request){
+		String fetchText = dao.fetchBannerText(request);
+		return fetchText;
+	}
+	@RequestMapping("/uploadBannerText")
+	public String uploadBannerText(HttpServletRequest request){
+		String uploadText = dao.uploadBannerText(request);
+		return uploadText;
+	}
+	@RequestMapping("/getCustomerinfo")
+	public String customerInformation(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		String subscriptions = dao.getCustomerList();
 		return subscriptions;
+	}
+	@RequestMapping("/getInventorydetails")
+	public void inventoryDetails(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		List<ProductItem> details = dao.getinventoryDetails();
+		Gson gson = new Gson();
+		JsonElement element = gson.toJsonTree(details, new TypeToken<List<ProductItem>>() {
+		}.getType());
+		JsonArray jsonArray = element.getAsJsonArray();
+		response.setContentType("application/json");
+		response.getWriter().print(jsonArray);
+		//return details.toString();
+	}
+	@RequestMapping("/getCustomerBillinginfo")
+	public String getCustomerBillingDetail(HttpServletRequest request, HttpServletResponse response) throws JSONException, ParseException{
+		String result = dao.getCustomerBillingDetail(request);
+		return result;
+	}
+	@RequestMapping("/updateProductDetails")
+	public String updateProductDetails(HttpServletRequest request){
+		//System.out.println(request+"   88888888888   " +request.getParameter("prodName"));
+		String result = dao.updateProductDetails(request);
+		return result;
 	}
 	@RequestMapping(value="/uploadBannerImage",method = RequestMethod.POST)
 	public @ResponseBody String uploadBannerImage(MultipartHttpServletRequest request) throws IOException{
@@ -55,9 +113,11 @@ public class RESTController {
             byte[] bytes = multiFile.getBytes();
             String path=request.getServletContext().getRealPath("/");
             System.out.println(path);
-            File directory=    new File("Downloads/wallistry-terms/src/main/resources/static/images/BannerImage");
+            File directory= new File("/Users/MAVJAY/Downloads/wallistry-terms/src/main/resources/static/images/BannerImage");
             if (!directory.exists())
     			directory.mkdirs();
+            String ext = multiFile.getContentType();
+            String ext1 = ext.substring(ext.indexOf("/")+1);
     		File destination1 = new File(directory + "/" + multiFile.getName()+".png");
     		BufferedImage src;
     		try {

@@ -5,9 +5,9 @@
     height: 100%
 }
 #sidebar-wrapper {
-    margin-left: -150px;
+    margin-left: -250px;
     left: 70px;
-    width: 150px;
+    width: 250px;
     background: #222;
     position: fixed;
     height: 100%;
@@ -18,7 +18,7 @@
 .sidebar-nav {
     display: block;
     float: left;
-    width: 150px;
+    width: 250px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -28,7 +28,7 @@
     display: block;
     float: left;
     text-decoration: none;
-    width: 150px;
+    width: 250px;
     background: #252525;
     border-top: 1px solid #373737;
     border-bottom: 1px solid #1A1A1A;
@@ -81,14 +81,14 @@
   background: none;
 }
 #wrapper.active {
-    padding-left: 150px;
+    padding-left: 250px;
 }
 #wrapper.active #sidebar-wrapper {
-    left: 150px;
+    left: 250px;
 }
 /* //////// dashboard components /////// */
 .cust-div {
-	height:150px;
+	height:250px;
 	text-align: center;
     font-size: 24px;
 }
@@ -116,4 +116,43 @@
 	padding: 8px;
     background: #cecece;
     font-size: 16px;
+}
+/* Inventory table */
+.inventory-table{
+	width:100%;
+}
+.inventory-table thead{
+	background-color: #cecece;
+}
+.inventory-table thead tr th, .inventory-table tbody tr td{
+	padding:16px;
+}
+.modal-input label{
+	width:100px;
+}
+#bannerText{
+	width:100%;
+	height:100%;
+}
+.ui-widget-content {
+    border: 1px solid #dddddd;
+    background: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+}
+.ui-widget-header{
+	background: transparent;
+	border:none;
+}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{
+	    background: white;
+    color: black;
+}
+.ui-dialog .ui-dialog-buttonpane{
+	background:transparent;
+	    border-width: 0 0 0 0;
+}
+.ui-dialog .ui-dialog-buttonpane button{
+	background: transparent;
+    color: white;
+    border-radius: 5px;
 }

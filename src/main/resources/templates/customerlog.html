@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: common-header">
+</head>
+<body>
+	<div id="wrapper" class="active">
+		<div th:replace="common/seller-nav :: common-sellernav"></div>
+		<div th:replace="common/seller-nav :: common-sellernav-topbar"></div>
+		<table class="inventory-table" id="customerData">
+		<thead>
+			<tr>
+			<th>Customer Name</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			</tr>
+		</thead>
+		</table>
+	<div id="customer_dialog">
+	<p id="customerId"></p>
+	<div class="billing-customer-info">
+	<p>Billing info</p>
+	<p><label>Name</label> : <span id="cust-info-name"></span></p>
+	<p><label>Address</label> : <span id="cust-info-address"></span></p>
+	<p><label>Email Id</label> : <span id="cust-info-email"></span></p>
+	<p><label>Phone no</label> : <span id="cust-info-phone"></span></p>
+	</div>
+
+	</div>
+	</div>
+
+	<div th:replace="common/header :: before-body-script"></div>
+	<script th:src="@{/js/seller.js}"></script>
+</body>
+</html>

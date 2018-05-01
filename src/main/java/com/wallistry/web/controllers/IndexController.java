@@ -89,4 +89,13 @@ public class IndexController {
 	public String sellerInventory(){
 		return "seller-inventory";
 	}
+	@RequestMapping("/seller-subscriberlog")
+	public String subscriberlog(){
+		return "subscriberlog";
+	}
+	@RequestMapping("/seller-customerlog")
+	public String customerlog(){
+		return "customerlog";
+	}
+	
 }

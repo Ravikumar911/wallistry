@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: common-header">
+</head>
+<body>
+	<div id="wrapper" class="active">
+		<div th:replace="common/seller-nav :: common-sellernav"></div>
+		<div th:replace="common/seller-nav :: common-sellernav-topbar"></div>
+		<table class="inventory-table" id="subscriberData">
+		<thead>
+			<tr>
+			<th>S.no</th>
+			<th>Date</th>
+			<th>Email ID</th>
+			</tr>
+		</thead>
+		</table>
+	</div>
+	<div th:replace="common/header :: before-body-script"></div>
+	<script th:src="@{/js/seller.js}"></script>
+</body>
+</html>

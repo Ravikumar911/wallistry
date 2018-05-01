@@ -11,16 +11,16 @@
 			<div class="col-md-6 cust-div" >
 			<div class="cust-div-content" style="background-color:green">
 			<div>No of customers</div>
-				<div class="div-sub-content">9</div>
+				<div class="div-sub-content" id="customerCount">9</div>
 			</div>	
 			</div>
 			<div class="col-md-6 cust-div" >
 			<div class="cust-div-content" style="background-color:blue">
 				<div>No of subscribers</div>
-				<div class="div-sub-content">8</div>
+				<div class="div-sub-content" id="subscriberCount">8</div>
 			</div>
 			</div>
-		</div>
+		</div> 
 		<div class="row" style="padding:36px">
 		<div class="col-md-12" style="font-size:24px" >Revenue</div>
 			<div class="col-md-3 cust-div" >
@@ -62,24 +62,9 @@
 					</div>
 				</div>
 				<div class="col-md-6 zero-pad" style="padding:8px">
-					<div class="modal fade" id="addText1" tabindex="-1" role="dialog"
-						aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-body">
-										<div class="form-group">
-											<textarea style="width: 100%">
-         									New Text</textarea>
-										</div>
-										<button type="submit" class="btn btn-default">Save
-											changes</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-8 upload-text">Text 1</div>
+					<div class="col-md-8 upload-text" id="bannerText1">Text 1</div>
 					<div class="col-md-4 zero-pad">
-						<button class=" uploadContent" data-toggle="modal" data-target="#addText1">Add
+						<button class=" uploadContent uploadText" id="text1">Add
 							text</button>
 					</div>
 				</div>
@@ -95,9 +80,9 @@
 					</div>
 				</div>
 				<div class="col-md-6 zero-pad" style="padding:8px">
-					<div class="col-md-8 upload-text">Text 2</div>
+					<div class="col-md-8 upload-text" id="bannerText2">Text 2</div>
 					<div class="col-md-4 zero-pad">
-						<button class=" uploadContent">Add text</button>
+						<button class=" uploadContent uploadText" id="text2">Add text</button>
 					</div>
 				</div>
 			</div>
@@ -112,9 +97,9 @@
 					</div>
 				</div>
 				<div class="col-md-6 zero-pad" style="padding:8px">
-					<div class="col-md-8 upload-text">Text 3</div>
+					<div class="col-md-8 upload-text" id="bannerText3">Text 3</div>
 					<div class="col-md-4 zero-pad">
-						<button class=" uploadContent">Add text</button>
+						<button class=" uploadContent uploadText" id="text3">Add text</button>
 					</div>
 				</div>
 			</div>
@@ -129,11 +114,15 @@
 					</div>
 				</div>
 				<div class="col-md-6 zero-pad" style="padding:8px">
-					<div class="col-md-8 upload-text">Text 4</div>
+					<div class="col-md-8 upload-text uploadText" id="bannerText4">Text 4</div>
 					<div class="col-md-4 zero-pad">
-						<button class=" uploadContent">Add text</button>
+						<button class=" uploadContent" id="text4">Add text</button>
 					</div>
 				</div>
+			</div>
+			<div id="uploadTextcontent">
+			<input type="hidden" id="textId"/>
+			<textarea id="bannerText"></textarea>
 			</div>
 		</div>
 	</div>
