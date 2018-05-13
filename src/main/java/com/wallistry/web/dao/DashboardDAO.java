@@ -58,6 +58,60 @@ public class DashboardDAO {
 		return countArr.toString();
 	}
 	
+	public String fetchPendingOrders() throws JSONException{
+		String text_sql = "select * from customerlogview where status= 'pending'";
+		JSONArray ordersArr = new JSONArray();
+		List<Map<String, Object>> rows = jdbcTemplate.queryForList(text_sql);
+		for(Map<String,Object>row:rows){
+			JSONObject obj = new JSONObject();
+			obj.put("orderno", row.get("orderno"));
+			obj.put("date", row.get("billdate"));
+			obj.put("customer_name", row.get("name"));
+			obj.put("price", row.get("itemprice"));
+			obj.put("quantity", row.get("totalquantity"));
+			obj.put("pincode", row.get("pincode"));
+			obj.put("paymentmode", row.get("paymentmode"));
+			ordersArr.put(obj);
+		}
+		return ordersArr.toString();
+		
+	}
+	public String fetchOrders(HttpServletRequest request) throws JSONException{
+		String text_sql = "select * from customerlogview where status= ?";
+		JSONArray orderArr = new JSONArray();
+		List<Map<String,Object>> rows = jdbcTemplate.queryForList(text_sql,request.getParameter("status"));
+		for(Map<String,Object>row:rows){
+			JSONObject obj = new JSONObject();
+			System.out.println("St"+ row.get("status"));
+			obj.put("orderno", row.get("orderno"));
+			obj.put("date", row.get("billdate"));
+			obj.put("customer_name", row.get("name"));
+			obj.put("price", row.get("itemprice"));
+			obj.put("quantity", row.get("totalquantity"));
+			obj.put("pincode", row.get("pincode"));
+			obj.put("paymentmode", row.get("paymentmode"));
+			obj.put("status", row.get("status"));
+			orderArr.put(obj);
+		};
+		System.out.println(orderArr);
+		return orderArr.toString();
+	}
+	public String updateOrderStatus(HttpServletRequest request){
+		String reason ="";
+		if(request.getParameter("status").equals("cancelled")){
+			reason = request.getParameter("reason");
+		}
+		String orderUpdateSql = "update Bill_Details set status=?,reason=? where order_no=?";
+		int confirmOrderStatus = jdbcTemplate.update(orderUpdateSql, request.getParameter("status") , reason, request.getParameter("orderno"));
+		if(confirmOrderStatus == 1){
+			System.out.println("confirmOrderStatus"+  confirmOrderStatus);
+			return "success";
+		}else{
+			System.out.println("confirmOrderStatus"+  confirmOrderStatus);
+			return "failed";
+		}
+	}
+	 
 	public String fetchBannerText(HttpServletRequest request){
 		String text_sql = "select text from Banner_text where textname = ?";
 		String selectedText = (String) jdbcTemplate.queryForObject(text_sql, new Object[] { request.getParameter("paramId") }, String.class);
@@ -160,6 +214,23 @@ public class DashboardDAO {
 			return "failure";
 		}
 		
+	}
+	public String bulkOrderAction(HttpServletRequest request){
+		String query = "update Bill_Details set status=? where order_no = ?";
+		String orderStatus = request.getParameter("status");
+		String[] ordernos = request.getParameterValues("ordernos[]");
+		System.out.println("ord status :::"+orderStatus);
+		
+		int status = 0;
+		for (int i = 0; i < ordernos.length; i++) {
+			System.out.println(ordernos[i]);
+			status =jdbcTemplate.update(query,orderStatus,ordernos[i]);
+		}
+		if(status == 1){
+			return "success";
+		}else{
+			return "failure";
+		}
 	}
 
 }

@@ -5,6 +5,9 @@
 <body>
 <div id="wrapper" class="active">  
 	<div th:replace="common/seller-nav :: common-sellernav"></div>
+	<div th:replace="common/seller-nav :: common-sellernav-topbar"></div>
+        	<div th:replace="common/header :: before-body-script"></div>
+	<script th:src="@{/js/seller.js}"></script>
 </div>
 </body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: common-header">
+</head>
+<body>
+	<div id="wrapper" class="active">
+		<div th:replace="common/seller-nav :: common-sellernav"></div>
+		<div th:replace="common/seller-nav :: common-sellernav-topbar"></div>
+		<div>
+		<div class="bulk-action-pending">
+		<button class="sec-order-button" id="bulk-confirm-btn">Bulk confirmation</button>
+		</div>
+		<div class="bulk-action-active" style="display:none">
+		<button class="sec-order-button" id="bulk-dispatch-btn">Bulk dispatchment</button>
+		<button class="sec-order-button">Download CSV</button>
+		</div>
+		</div>
+		<div >
+		<div class="col-md-3 order-status"><div class="active">PENDING</div></div>
+		<div class="col-md-3 order-status"><div>ACTIVE</div></div>
+		<div class="col-md-3 order-status"><div>COMPLETED</div></div>
+		<div class="col-md-3 order-status"><div>CANCELLED</div></div>
+		</div>
+		<table id="ordersTable">
+		<thead>
+		<tr>
+		<th>Select all <input id="selectall" type="checkbox"/></th>
+		<th>Order no</th>
+		<th>Date</th>
+		<th>Customer name</th>
+		<th>Price</th>
+		<th>Quantity</th>
+		<th>pincode</th>
+		<th>Payment status</th>
+		<th id="status-action-th">Status</th>
+		</tr>
+		</thead>
+		</table>
+		<div id="confirmOrderDialog">
+		<input id="confirmOrderno" type="hidden" />
+		Are you sure to confirm the order?
+		</div>
+		<div id="cancelOrderDialog">
+		<input id="cancelOrderno" type="hidden" />
+		<label>Reason</label>
+		<textarea id="cancelReason"></textarea>
+		</div>
+		<div id="confirmDispatchDialog">
+		<input id="dispatchOrderno" type="hidden" />
+		Are you sure you want to continue?
+		</div>
+		<div id="bulkOrderAction">
+		Are you sure you want to continue?
+		</div>
+		<div id="bulkOrderDispatchAction">
+		Are you sure you want to continue?
+		</div>
+	</div>
+	<div th:replace="common/header :: before-body-script"></div>
+	<script th:src="@{/js/seller-orders.js}"></script>
+</body>
+</html>

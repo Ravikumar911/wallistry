@@ -97,5 +97,12 @@ public class IndexController {
 	public String customerlog(){
 		return "customerlog";
 	}
-	
+	@RequestMapping("/seller-orders")
+	public String sellerOrders(){
+		return "seller-orders";
+	}
+	@RequestMapping("/seller-login")
+	public String login(){
+		return "seller-login";
+	}
 }

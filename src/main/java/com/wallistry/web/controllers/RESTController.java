@@ -103,6 +103,27 @@ public class RESTController {
 		String result = dao.updateProductDetails(request);
 		return result;
 	}
+	@RequestMapping("/fetchPendingOrders")
+	public String updatePendingOrders() throws JSONException{
+		String result = dao.fetchPendingOrders();
+		return result;
+	}
+	@RequestMapping("/fetchOrdersStatus")
+	public String updateOrders(HttpServletRequest request) throws JSONException{
+		System.out.println("fetchorders  "+request.getParameter("status"));
+		String result = dao.fetchOrders(request);
+		return result;
+	}
+	@RequestMapping("/updateOrderStatus")
+	public String updateOrderStatus(HttpServletRequest request){
+		String result = dao.updateOrderStatus(request);
+		return result;
+	}
+	@RequestMapping("/bulkorderaction")
+	public String bulkOrderAction(HttpServletRequest request){
+		String result = dao.bulkOrderAction(request);
+		return result;
+	}
 	@RequestMapping(value="/uploadBannerImage",method = RequestMethod.POST)
 	public @ResponseBody String uploadBannerImage(MultipartHttpServletRequest request) throws IOException{
 		 Iterator<String> itrator = request.getFileNames();

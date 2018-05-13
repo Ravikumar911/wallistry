@@ -17,7 +17,7 @@
 <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Lato:regular,light,bold|Raleway:regular,light,bold|Roboto:regular,light,bold|PT+Serif:regular,light,bold"/>
 <!-- Custom styles for this template -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet"/>
+<link th:href="@{/webjars/jquery-ui/1.12.1/jquery-ui.min.css}" rel="stylesheet"/>
 <link th:href="@{/css/style.css}" rel="stylesheet" media="screen" />
 <link th:href="@{/css/seller.css}" rel="stylesheet" media="screen" />
 <link th:href="@{/css/theme.css}" rel="stylesheet" media="screen" />
@@ -25,7 +25,7 @@
 </head>
 <div th:fragment="before-body-script">
 	<script th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+	<script th:src="@{/webjars/jquery-ui/1.12.1/jquery-ui.min.js}"></script>
 	<script th:src="@{/webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
 </div>
 </html>
