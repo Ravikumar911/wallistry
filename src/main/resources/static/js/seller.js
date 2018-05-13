@@ -5,18 +5,16 @@ $(document).ready(function(){
 			var countData = JSON.parse(data);
 			$("#customerCount").text(countData[0].customerCount);
 			$("#subscriberCount").text(countData[0].subscriberCount);
+			$("#revenueToday").text(countData[0].revenueToday);
+			$("#revenueYesterday").text(countData[0].revenueYesterday);
+			$("#revenue7days").text(countData[0].revenue7days);
+			$("#revenue1month").text(countData[0].revenue1month);
 		})
+		
+getInventoryDetails();
 
-		$.get("/getInventorydetails",function(data, status){
-				function formatItem(item) {
-					return '<td>'+item.name + '</td> <td> ' + item.category + ' </td><td>' + item.price+'</td><td>'+item.quantity+'</td><td>'+item.id+"</td><td>"+item.status+"</td><td><button class='editUser' id='product"+item.id+"' >Edit</button></td>";
-					}
-				
-				$.each(data, function (key, item) {
+		
 
-		            $('<tr>', { html: formatItem(item) }).appendTo($("#tbdata"));
-		        });
-			})
 		$.get("/getsubscriptioninfo",function(data,status){
 			function formatItem(item) {
 				return '<td>'+item.id + '</td> <td> ' + item.date + ' </td><td>' + item.email+'</td>';
@@ -40,7 +38,18 @@ $(document).ready(function(){
 		
 });
 /////////////
+function getInventoryDetails(){
+	$.get("/getInventorydetails",function(data, status){
+		function formatItem(item) {
+			return '<td>'+item.name + '</td> <td> ' + item.category + ' </td><td>' + item.price+'</td><td>'+item.quantity+'</td><td>'+item.id+"</td><td>"+item.status+"</td><td><button class='editUser' id='product"+item.id+"' >Edit</button></td>";
+			}
+		
+		$.each(data, function (key, item) {
 
+            $('<tr>', { html: formatItem(item) }).appendTo($("#tbdata"));
+        });
+	})
+}
 
 /////////////
 
@@ -154,14 +163,23 @@ edit_dialogs = $( "#edit-dialog-form" ).dialog({
     		var price = $("#edit_price").val();
     		var quantity = $("#edit_quantity").val();
     		var id = $("#prod_id").val();
+    		var status ="";
+    			if($("#itemFreeze").is(':checked')){
+    				status = "Out of stock"
+    			}else{
+    				status = "In stock"
+    			}
     		$.ajax({
     			url:"updateProductDetails",
     			type:"POST",
-    			data:{prodPrice:price,prodQty:quantity,prodId:id},
+    			data:{prodPrice:price,prodQty:quantity,prodId:id,status:status},
     			success:function(data){
-    				alert(data);
+    				$( "#edit-dialog-form").dialog("close");
+    				$("#tbdata tbody tr").remove();
+    				getInventoryDetails();
     			},
     			error:function(data){
+    				$( "#edit-dialog-form").dialog("close");
     				alert(data);
     			}
     		})

@@ -48,12 +48,25 @@ public class DashboardDAO {
 	public String getDashboardInfo() throws JSONException{
 		String sqlCustomerCount = "select count(email) from Customer_details";
 		String sqlSubscriberCount = "select count(email) from Subscription";
+		String sqlYesterdayrevenue = "select coalesce(sum(total_price),0) from Bill_Details where date(DATE)=date(date_sub(now(),interval 1 day))";
+		String sqlTodayRevenue = "select coalesce(sum(total_price),0) from Bill_Details where date(DATE) = curdate() ";
+		String sqlLast7daysRevenue = "select coalesce(sum(total_price),0) from Bill_Details where date(DATE) between date_sub(NOW(), INTERVAL DAYOFWEEK(NOW())+6 DAY) AND date_sub(NOW(), INTERVAL DAYOFWEEK(NOW())-1 DAY)";
+		String sqlLastmonthRevenue = "select coalesce(sum(total_price),0) from Bill_Details where  `date` >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)";
+		
+		int sqlYesterdayrevenueCount = jdbcTemplate.queryForObject(sqlYesterdayrevenue, new Object[] {}, int.class);
+		int sqlTodayRevenueCount = jdbcTemplate.queryForObject(sqlTodayRevenue, new Object[] {}, int.class);
+		int sqlLast7daysRevenueCount = jdbcTemplate.queryForObject(sqlLast7daysRevenue, new Object[] {}, int.class);
+		int sqlLastmonthRevenueCount = jdbcTemplate.queryForObject(sqlLastmonthRevenue, new Object[] {}, int.class);
 		int customerCount = jdbcTemplate.queryForObject(sqlCustomerCount, new Object[] {}, int.class);
 		int subscriberCount = jdbcTemplate.queryForObject(sqlSubscriberCount, new Object[] {}, int.class);
 		JSONArray countArr = new JSONArray();
 		JSONObject countObj = new JSONObject();
 		countObj.put("customerCount", customerCount);
 		countObj.put("subscriberCount", subscriberCount);
+		countObj.put("revenueToday", sqlTodayRevenueCount);
+		countObj.put("revenueYesterday", sqlYesterdayrevenueCount);
+		countObj.put("revenue7days", sqlLast7daysRevenueCount);
+		countObj.put("revenue1month", sqlLastmonthRevenueCount);
 		countArr.put(countObj);
 		return countArr.toString();
 	}
@@ -206,9 +219,9 @@ public class DashboardDAO {
 		return details;
 	}
 	public String updateProductDetails(HttpServletRequest request){
-		System.out.println(request.getParameter("prodPrice"));
-		String query= "update product_item set price = ?,quantity = ? where id= ? ";
-		int status =jdbcTemplate.update(query,request.getParameter("prodPrice"),request.getParameter("prodQty"),request.getParameter("prodId"));
+
+		String query= "update product_item set price = ?,quantity = ?,status = ? where id= ? ";
+		int status =jdbcTemplate.update(query,request.getParameter("prodPrice"),request.getParameter("prodQty"),request.getParameter("status"),request.getParameter("prodId"));
 		if(status == 1){
 			return "success";
 		}else{
