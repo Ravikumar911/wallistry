@@ -91,6 +91,7 @@ public class DashboardDAO {
 			obj.put("pincode", row.get("pincode"));
 			obj.put("paymentmode", row.get("paymentmode"));
 			obj.put("status", row.get("status"));
+			obj.put("cancelReason", row.get("Reason"));
 			orderArr.put(obj);
 		};
 		System.out.println(orderArr);

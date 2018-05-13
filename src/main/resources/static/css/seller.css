@@ -139,13 +139,13 @@
     border-color: #ffffff;
 }
 /* Inventory table */
-.inventory-table, #ordersTable{
+.inventory-table, #ordersTable, .customer-table, .subscriber-table{
 	width:100%;
 }
-.inventory-table thead, #ordersTable thead{
+.inventory-table thead, #ordersTable thead, .customer-table thead, .subscriber-table thead{
 	background-color: #cecece;
 }
-.inventory-table thead tr th, #ordersTable thead tr th, #ordersTable tbody tr td{
+.inventory-table thead tr th,.inventory-table tbody tr td,.customer-table thead tr th,.customer-table tbody tr td, #ordersTable thead tr th, #ordersTable tbody tr td, .subscriber-table thead tr th, .subscriber-table tbody tr td{
 	padding:16px;
 }
 .modal-input label{
