@@ -46,12 +46,12 @@ public class DashboardDAO {
 		return subscriptions;
 	}
 	public String getDashboardInfo() throws JSONException{
-		String sqlCustomerCount = "select count(email) from Customer_details";
-		String sqlSubscriberCount = "select count(email) from Subscription";
-		String sqlYesterdayrevenue = "select coalesce(sum(total_price),0) from Bill_Details where date(DATE)=date(date_sub(now(),interval 1 day))";
-		String sqlTodayRevenue = "select coalesce(sum(total_price),0) from Bill_Details where date(DATE) = curdate() ";
-		String sqlLast7daysRevenue = "select coalesce(sum(total_price),0) from Bill_Details where date(DATE) between date_sub(NOW(), INTERVAL DAYOFWEEK(NOW())+6 DAY) AND date_sub(NOW(), INTERVAL DAYOFWEEK(NOW())-1 DAY)";
-		String sqlLastmonthRevenue = "select coalesce(sum(total_price),0) from Bill_Details where  `date` >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)";
+		String sqlCustomerCount = "select count(email) from customer_details";
+		String sqlSubscriberCount = "select count(email) from subscription";
+		String sqlYesterdayrevenue = "select coalesce(sum(total_price),0) from bill_details where date(DATE)=date(date_sub(now(),interval 1 day))";
+		String sqlTodayRevenue = "select coalesce(sum(total_price),0) from bill_details where date(DATE) = curdate() ";
+		String sqlLast7daysRevenue = "select coalesce(sum(total_price),0) from bill_details where date(DATE) between date_sub(NOW(), INTERVAL DAYOFWEEK(NOW())+6 DAY) AND date_sub(NOW(), INTERVAL DAYOFWEEK(NOW())-1 DAY)";
+		String sqlLastmonthRevenue = "select coalesce(sum(total_price),0) from bill_details where  `date` >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)";
 		
 		int sqlYesterdayrevenueCount = jdbcTemplate.queryForObject(sqlYesterdayrevenue, new Object[] {}, int.class);
 		int sqlTodayRevenueCount = jdbcTemplate.queryForObject(sqlTodayRevenue, new Object[] {}, int.class);
@@ -106,8 +106,8 @@ public class DashboardDAO {
 			obj.put("status", row.get("status"));
 			obj.put("cancelReason", row.get("Reason"));
 			orderArr.put(obj);
-		};
-		System.out.println(orderArr);
+		}
+        System.out.println(orderArr);
 		return orderArr.toString();
 	}
 	public String updateOrderStatus(HttpServletRequest request){
@@ -115,7 +115,7 @@ public class DashboardDAO {
 		if(request.getParameter("status").equals("cancelled")){
 			reason = request.getParameter("reason");
 		}
-		String orderUpdateSql = "update Bill_Details set status=?,reason=? where order_no=?";
+		String orderUpdateSql = "update bill_details set status=?,reason=? where order_no=?";
 		int confirmOrderStatus = jdbcTemplate.update(orderUpdateSql, request.getParameter("status") , reason, request.getParameter("orderno"));
 		if(confirmOrderStatus == 1){
 			System.out.println("confirmOrderStatus"+  confirmOrderStatus);
@@ -127,13 +127,13 @@ public class DashboardDAO {
 	}
 	 
 	public String fetchBannerText(HttpServletRequest request){
-		String text_sql = "select text from Banner_text where textname = ?";
-		String selectedText = (String) jdbcTemplate.queryForObject(text_sql, new Object[] { request.getParameter("paramId") }, String.class);
+		String text_sql = "select text from banner_text where textname = ?";
+		String selectedText = jdbcTemplate.queryForObject(text_sql, new Object[] { request.getParameter("paramId") }, String.class);
 		System.out.println(selectedText);
 		return selectedText;
 	}
 	public String uploadBannerText(HttpServletRequest request){
-		String text_sql = "update Banner_text set text = ? where textname = ?";
+		String text_sql = "update banner_text set text = ? where textname = ?";
 		int uploadTextStatus = jdbcTemplate.update(text_sql, request.getParameter("uploadText") ,request.getParameter("paramId"));
 		if(uploadTextStatus == 1){
 			return "success";
@@ -143,16 +143,16 @@ public class DashboardDAO {
 	}
 	
 	public String getCustomerList(){
-		String sql = "select * from Customer_details";
+		String sql = "select * from customer_details";
 		JSONArray custdetails = new JSONArray();
 		List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql);
 		for(Map<String,Object> row : rows){
 			JSONObject obj = new JSONObject();
 			try {
-				obj.put("customer_name", (String)row.get("name"));
+				obj.put("customer_name", row.get("name"));
 				obj.put("customer_id",row.get("customer_id"));
-				Long totalPrice = (Long) jdbcTemplate.queryForObject("select sum(totalprice) from customerlogview where customerid = ? ", new Object[] { row.get("customer_id") }, Long.class);
-				Long totalQty = (Long) jdbcTemplate.queryForObject("select sum(totalquantity) from customerlogview where customerid = ? ", new Object[] { row.get("customer_id") }, Long.class);
+				Long totalPrice = jdbcTemplate.queryForObject("select sum(totalprice) from customerlogview where customerid = ? ", new Object[] { row.get("customer_id") }, Long.class);
+				Long totalQty = jdbcTemplate.queryForObject("select sum(totalquantity) from customerlogview where customerid = ? ", new Object[] { row.get("customer_id") }, Long.class);
 				obj.put("cutomer_totPrice", totalPrice);
 				obj.put("customer_totQty", totalQty);
 			} catch (JSONException e) {
@@ -163,7 +163,7 @@ public class DashboardDAO {
 		}	
 		return custdetails.toString();
 	}
-	public String getCustomerBillingDetail(HttpServletRequest request) throws JSONException, ParseException{
+	public String getCustomerBillingDetail(HttpServletRequest request) throws JSONException {
 		JSONArray arr = new JSONArray();
 		String customerId = request.getParameter("cur_customerId");
 		String sql = "select * from customerlogview where customerid = ?"; 
@@ -230,7 +230,7 @@ public class DashboardDAO {
 		
 	}
 	public String bulkOrderAction(HttpServletRequest request){
-		String query = "update Bill_Details set status=? where order_no = ?";
+		String query = "update bill_details set status=? where order_no = ?";
 		String orderStatus = request.getParameter("status");
 		String[] ordernos = request.getParameterValues("ordernos[]");
 		System.out.println("ord status :::"+orderStatus);
