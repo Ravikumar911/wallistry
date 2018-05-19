@@ -15,9 +15,9 @@ public class IndexController {
 		return "bottle";
 	}
 	
-	@RequestMapping("/homeware")
+	@RequestMapping("/dining")
 	public String homeware(){
-		return "homeware";
+		return "dining";
 	}
 	
 	@RequestMapping("/coasters")
@@ -104,5 +104,13 @@ public class IndexController {
 	@RequestMapping("/seller-login")
 	public String login(){
 		return "seller-login";
+	}
+	@RequestMapping("/kriyaa6")
+	public String kriyaa6(){
+		return "kriyaa6";
+	}
+	@RequestMapping("/kriyaa5")
+	public String kriyaa5(){
+		return "kriyaa5";
 	}
 }

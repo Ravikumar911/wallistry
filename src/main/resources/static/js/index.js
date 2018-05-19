@@ -15,15 +15,4 @@ $(document).ready(function(){
 	    nav:true,
 	    items:1,
 	});
-	$("#sendSubscriptionEmail").click(function(){
-		$.ajax({
-			  method: "POST",
-			  url: "some.php",
-			  data: { name: "John", location: "Boston" }
-			})
-			  .done(function( msg ) {
-			    alert( "Data Saved: " + msg );
-			  });
-	})
-
-})
+});

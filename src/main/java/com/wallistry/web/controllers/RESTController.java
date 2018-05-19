@@ -124,6 +124,21 @@ public class RESTController {
 		String result = dao.bulkOrderAction(request);
 		return result;
 	}
+	@RequestMapping("updateSubscriber")
+	public String updateSubscriber(HttpServletRequest request){
+		String result = dao.updateSubscriber(request);
+		return result;
+	}
+	@RequestMapping("getDiningProducts")
+	public String getDiningProducts() throws JSONException{
+		String result = dao.getDiningProducts();
+		return result;
+	}
+	@RequestMapping("getStationeryProducts")
+	public String getStationeryProducts() throws JSONException{
+		String result = dao.getStationeryProducts();
+		return result;
+	}
 	@RequestMapping(value="/uploadBannerImage",method = RequestMethod.POST)
 	public @ResponseBody String uploadBannerImage(MultipartHttpServletRequest request) throws IOException{
 		 Iterator<String> itrator = request.getFileNames();

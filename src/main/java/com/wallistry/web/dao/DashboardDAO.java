@@ -246,5 +246,52 @@ public class DashboardDAO {
 			return "failure";
 		}
 	}
-
+	public String updateSubscriber(HttpServletRequest request){
+		String query ="insert into Subscription(email,date) values(?,?)";
+		List<String> subList= jdbcTemplate.queryForList("select email from Subscription",String.class);
+		if(subList.contains(request.getParameter("email"))){
+			return "subscriber exist";
+		}else{
+			Date curDate = new Date();
+			int status = jdbcTemplate.update(query,request.getParameter("email"), curDate );
+			if(status == 1){
+				return "success";
+			}else{
+				return "failed";
+			}
+		}
+		
+	}
+	public String getDiningProducts() throws JSONException{
+		String sql ="select * from product_item where category ='dining' ";
+		JSONArray ordersArr = new JSONArray();
+		List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql);
+		System.out.println("rowssss"+rows);
+		for (Map<String, Object> row : rows){
+			JSONObject productItem = new JSONObject();
+			productItem.put("id",(int)row.get("id"));
+			productItem.put("product_name",(String) row.get("name"));
+			productItem.put("product_price",(int) row.get("price"));
+			productItem.put("product_category",(String) row.get("category"));
+			System.out.println(productItem);
+			ordersArr.put(productItem);			
+		}
+		return ordersArr.toString();
+	}
+	public String getStationeryProducts() throws JSONException{
+		String sql ="select * from product_item where category ='stationery' ";
+		JSONArray ordersArr = new JSONArray();
+		List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql);
+		System.out.println("rowssss"+rows);
+		for (Map<String, Object> row : rows){
+			JSONObject productItem = new JSONObject();
+			productItem.put("id",(int)row.get("id"));
+			productItem.put("product_name",(String) row.get("name"));
+			productItem.put("product_price",(int) row.get("price"));
+			productItem.put("product_category",(String) row.get("category"));
+			System.out.println(productItem);
+			ordersArr.put(productItem);			
+		}
+		return ordersArr.toString();
+	}
 }
