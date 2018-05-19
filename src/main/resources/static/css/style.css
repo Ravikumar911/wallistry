@@ -331,7 +331,12 @@ a svg:hover {
 	padding: 0;
 	font-size:16px;
 }
-
+#subscribeError{
+	color:red;
+}
+#emailSubscription{
+	outline:none;
+}
 /* Tabs  */
 .item-section {
 	margin: 0pt -13pt;
