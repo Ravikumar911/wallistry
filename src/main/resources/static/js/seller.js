@@ -9,7 +9,7 @@ $(document).ready(function(){
 			$("#revenueYesterday").text(countData[0].revenueYesterday);
 			$("#revenue7days").text(countData[0].revenue7days);
 			$("#revenue1month").text(countData[0].revenue1month);
-		})
+		});
 		
 getInventoryDetails();
 
@@ -23,7 +23,7 @@ getInventoryDetails();
 
 	            $('<tr>', { html: formatItem(item) }).appendTo($("#subscriberData"));
 	        });
-		})
+		});
 		$.get("/getCustomerinfo",function(data,status){
 			var customer = JSON.parse(data);
 			
@@ -110,7 +110,7 @@ textUpload = $("#uploadTextcontent").dialog({
     		$("#uploadTextcontent").dialog("close");
     	}
     }
-})	
+});
 	
 customerData = $("#customer_dialog").dialog({
 	 autoOpen: false,
@@ -128,7 +128,7 @@ customerData = $("#customer_dialog").dialog({
     		data:{cur_customerId},
     		success:function(data,success){
     			$(".removableClass").parent().remove();
-    			var parsedData = JSON.parse(data)
+    			var parsedData = JSON.parse(data);
     		$("#cust-info-name").text(parsedData[0].customer_name);
     		$("#cust-info-address").text(parsedData[0].customer_address);
     		$("#cust-info-email").text(parsedData[0].customer_email);
@@ -219,13 +219,13 @@ edit_dialogs = $( "#edit-dialog-form" ).dialog({
 $("#customerData").on('click','a.customerInfo',function(){
 	$("#customerId").text(this.id);
 	customerData.dialog( "open" );
-})
+});
 
 $(".uploadText").on('click',function(){
 	var paramid = $(this).attr('id');
 	$("#textId").val(paramid);
 	textUpload.dialog( "open" );
-})
+});
 
 
 
@@ -269,7 +269,7 @@ function fileUpload(event){
 	 for (var i = 0; i < files.length; i++) {
 		  var file = files[i];
 		  if(!file.type.match('image.*')) { 
-			  alert("oly imges")
+			  alert("oly imges");
 			  error = 1;
 		  }else{
 			  data.append(fileName,file);

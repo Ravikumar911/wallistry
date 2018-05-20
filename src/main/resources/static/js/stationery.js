@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$.get("/getStationeryProducts",function(data,status){
 		$.each(JSON.parse(data), function (key, item) {
 			var image = "";
-			var hrefVal = ""
+			var hrefVal = "";
 			if(item.product_name == "Kriya-Wooden notebook (mini)"){
 				image = "tab_notebook";
 				hrefVal = "/kriyaa6"
@@ -22,4 +22,4 @@ $(document).ready(function(){
             $("#stationery-items").append(otherElement);
         });
 	});
-})
+});

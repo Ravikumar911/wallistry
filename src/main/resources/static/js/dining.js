@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$.get("/getDiningProducts",function(data,status){
 		$.each(JSON.parse(data), function (key, item) {
 			var image = "";
-			var hrefVal = ""
+			var hrefVal = "";
 			if(item.product_name == "Bhumi-terracotta Waterbottle"){
 				image = "tab_waterbottle";
 				hrefVal = "/bottle"
@@ -19,4 +19,4 @@ $(document).ready(function(){
             $("#dining-items").append(otherElement);
         });
 	});
-})
+});

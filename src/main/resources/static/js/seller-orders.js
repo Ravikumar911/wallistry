@@ -22,7 +22,7 @@ $(".order-status div").on('click',function(){
 					}
 					}
 				$.each(jsonData, function (key, item) {
-					console.log(jsonData)
+					console.log(jsonData);
 		            $('<tr>', { html: formatItem(item) }).appendTo($("#ordersTable"));
 		        });		
 			})
@@ -67,7 +67,7 @@ $(".order-status div").on('click',function(){
 	}
 	$(this).addClass('active');
 	
-})
+});
 $(document).ready(function(){
 	
 $("#selectall").click(function () {
@@ -84,7 +84,7 @@ $(".chkRow").click(function () {
     chkRows.each(function () {
         if (!$(this).is(":checked")) {
             chkAll.removeAttr("checked", "checked");
-            return;
+
         }
     });
 });
@@ -98,7 +98,7 @@ $.get("fetchPendingOrders",function(data,status){
             $('<tr>', { html: formatItem(item) }).appendTo($("#ordersTable"));
         });		
 	})
-})
+});
 
 
 $(function() {
@@ -129,7 +129,7 @@ $(function() {
 	    buttons: {
 	    	Yes: function(){
 	    		var orderno = $("#confirmOrderno").val();
-	    		console.log("orederf"+orderno)
+	    		console.log("orederf"+orderno);
 	    		$.ajax({
 	    			url:"updateOrderStatus",
 	    			type:"GET",
@@ -148,7 +148,7 @@ $(function() {
 	    	}
 	    }
 	    
-	})
+	});
 	dispatchOrder = $("#confirmDispatchDialog").dialog({
 		autoOpen: false,
 	    width: 350,
@@ -170,7 +170,7 @@ $(function() {
 	    		})
 	    	}
 	    }
-	})
+	});
 	cancelOrder = $("#cancelOrderDialog").dialog({
 		autoOpen: false,
 	    width: 350,
@@ -179,8 +179,8 @@ $(function() {
 	    	Submit: function(){
 	    		var orderno = $("#cancelOrderno").val();
 	    		var reason = $("#cancelReason").val();
-	    		console.log(reason)
-	    		console.log("orederf"+orderno)
+	    		console.log(reason);
+	    		console.log("orederf"+orderno);
 	    		$.ajax({
 	    			url:"updateOrderStatus",
 	    			type:"GET",
@@ -198,7 +198,7 @@ $(function() {
 	    		$("#confirmOrderDialog").dialog("close");
 	    	}
 	    }
-	})
+	});
 	
 	$("#ordersTable").on('click',"button.order-confirm",function(){
 		var orderno = $(this).parent().parent()[0].id;
@@ -214,7 +214,7 @@ $(function() {
 		var orderno = $(this).parent().parent()[0].id;
 		$("#dispatchOrderno").val(orderno);
 		dispatchOrder.dialog("open");
-	})
+	});
 	var ordernos = [];
 	$("#bulk-confirm-btn").on('click',function(){
 		$('#ordersTable tbody').find('input[type="checkbox"]:checked').each(function () {
