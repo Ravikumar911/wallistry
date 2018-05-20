@@ -5,10 +5,10 @@ $(document).ready(function(){
 			var hrefVal = "";
 			if(item.product_name == "Bhumi-terracotta Waterbottle"){
 				image = "tab_waterbottle";
-				hrefVal = "/bottle"
+				hrefVal = "/bottle?price="+item.product_price
 			}else if(item.product_name == "Vanna wooden coaster"){
 				image = "tab_coasters";
-				hrefVal = "/coasters"
+				hrefVal = "/coasters?price="+item.product_price
 			}
             var otherElement = $('<div class="col-lg-4 col-sm-12 homeware-item">'
 					+'<div class="col-lg-12 card">'

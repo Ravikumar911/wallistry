@@ -71,7 +71,7 @@
 						</div>
 					</div>
 					<div class="col-lg-12 text-center min-spacing-top">
-						<p class="buy-item-price">Rs.890</p>
+						<p class="buy-item-price" id="kriyaa5Price"></p>
 					</div>
 					<div class="col-lg-12 col-sm-12 col-md-12 text-center">
 					</div>
@@ -250,5 +250,11 @@
 	<script th:src="@{/js/jquery.bxslider.js}"></script>
 	<script th:src="@{/js/jquery.zoom.min.js}"></script>
 	<script th:src="@{/js/buy-now.js}"></script>
+	<script type="text/javascript">
+	$("#stationery").addClass("active");
+	var urlParams = new URLSearchParams(window.location.search);
+	var v1 = urlParams.get('price');
+	$("#kriyaa5Price").text("Rs."+v1);
+	</script>
 </body>
 </html>

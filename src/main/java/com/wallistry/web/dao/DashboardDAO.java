@@ -247,8 +247,8 @@ public class DashboardDAO {
 		}
 	}
 	public String updateSubscriber(HttpServletRequest request){
-		String query ="insert into Subscription(email,date) values(?,?)";
-		List<String> subList= jdbcTemplate.queryForList("select email from Subscription",String.class);
+		String query ="insert into subscription(email,date) values(?,?)";
+		List<String> subList= jdbcTemplate.queryForList("select email from subscription",String.class);
 		if(subList.contains(request.getParameter("email"))){
 			return "subscriber exist";
 		}else{

@@ -12,7 +12,10 @@ $(document).ready(function(){
 	$(".owl-carousel-gift").owlCarousel({
 		margin:10,
 	    autoWidth:false,
+	    autoplay:true,
+	    loop:true,
 	    nav:true,
 	    items:1,
+	    navText : ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>']
 	});
 });

@@ -5,13 +5,13 @@ $(document).ready(function(){
 			var hrefVal = "";
 			if(item.product_name == "Kriya-Wooden notebook (mini)"){
 				image = "tab_notebook";
-				hrefVal = "/kriyaa6"
+				hrefVal = "/kriyaa6?price="+item.product_price
 			}else if(item.product_name == "Kriya-Wooden notebook (Premium)"){
 				image = "tab_notebook";
-				hrefVal = "/kriyaa5"
+				hrefVal = "/kriyaa5?price="+item.product_price
 			}else if(item.product_name == "Punai-DIY notebook"){
 				image = "tab_coasters";
-				hrefVal = "/diybook"
+				hrefVal = "/diybook?price="+item.product_price
 			}
             var otherElement = $('<div class="col-lg-4 col-sm-12 homeware-item">'
 					+'<div class="col-lg-12 card">'
